@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Engima Film - Register</title>
+    <link rel = "stylesheet" type = "text/css" href = "RegisterPage.css" />
+  </head>
+  <body>
+    <div class = "container">
+      <div class = "register-box">
+        <div> 
+          <div class= "title-font">
+            Welcome to <span id = "BigEngi">Engi</span>ma!
+          </div>
+          <br/> <br/>
+        </div>
+        
+        <div>
+        <form action = "RegisterPage.php" method = "POST">
+
+          <label for = "username">Username</label>
+          <input type = "text" placeholder = "joe.johndoe" name = "username" required>
+          <br/>
+
+          <label for = "email">Email Address</label>
+          <input type = "email" placeholder = "joe@email.com" name = "email" required>
+          <br/>
+
+          <label for = "phone">Phone Number</label>
+          <input type = "text" placeholder = "+62813xxxxxxxx" name = "phone" required/>
+          <br/>
+
+          <label for = "password">Password</label>
+          <input type = "password" placeholder = "make as strong as possible" name = "password" required>
+          <br/>
+
+          <label for = "confirm_password">Confirm Password</label>
+          <input type = "password" placeholder = "same as above" name = "confirm_password" required>
+          <br/>
+          
+          <label for = "confirm_password">Profile Picture</label>
+          <div class = "column-content">
+            <div class = "column-left-content">
+              <label id = "InputFile">
+            </div>
+            <div class = "column-right-content">
+              <input type="file" id = "InputButton">
+            </div>
+          </div>
+
+          <br/>
+          <button type = "submit" id = "SubmitButton">Register</button>
+          
+          <p>Already have account? <a href = "../login/LoginPage.html">Login here</a></p>
+        </div>
+      </div>
+      </form>
+    </div>
+  </body>
+</html>
