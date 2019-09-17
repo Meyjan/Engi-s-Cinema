@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Engima Film - Login</title>
+    <link rel = "stylesheet" type = "text/css" href = "LoginPage.css" />
+  </head>
+  <body>
+    <div class = "container">
+      <div class = "login-box">
+        <div> 
+          <div class= "title-font">
+            Welcome to <span id = "BigEngi">Engi</span>ma!
+          </div>
+          <br/> <br/>
+        </div>
+        
+        <div>
+        <form action = "LoginPage.php" method = "POST">
+
+            <label for = "email">Email</label>
+            <input type = "email" placeholder = "Enter your email here" name = "email" required>
+            <br/>
+
+            <label for = "password">Password</label>
+            <input type = "password" placeholder = "Enter your password here" name = "password" required>
+            <br/> <br/>
+
+            <button type = "submit">Login</button>
+            
+            <p>Don't have an account? <a href = "../register/RegisterPage.html">Register here</a></p>
+        </div>
+      </div>
+      </form>
+    </div>
+  </body>
+</html>

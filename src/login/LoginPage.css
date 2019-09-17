@@ -1,0 +1,76 @@
+form {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+label {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #00aeef;
+  text-decoration: none;
+}
+
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #888888;
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 17px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+button {
+  border-style: solid;
+  border-radius: 7px;
+  background-color: #00aeef;
+  color: #ffffff;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#BigEngi {
+  color: #00aeef;
+  font-weight: bolder;
+}
+
+.container {
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+.login-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-top: 3%;
+  margin-left: 35%;
+  margin-right: 35%;
+  padding: 10px;
+}
+
+.login-box:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title-font {
+  margin-top: 10%;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
