@@ -6,14 +6,15 @@ form {
 
 label {
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
 }
 
 p {
   text-align: center;
   font-weight: bold;
-  font-size: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-family: "Arial", sans-serif;
 }
 
 a {
@@ -36,8 +37,6 @@ button {
   border: 1px solid #888888;
   width: 100%;
   padding: 12px 20px;
-  margin-top: 8px;
-  margin-bottom: 17px;
   height: 50px;
   width: 200px;
   box-sizing: border-box;
@@ -47,13 +46,37 @@ button {
   cursor: pointer;
 }
 
-#InputButton {
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  margin-top: 10px;
+}
+
+[type="file"] + label {
   border-style: solid;
   border-radius: 7px;
   text-decoration-color: #ffffff;
   background-color: gray;
   color: #ffffff;
-  margin-top: 10px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: lighter;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+  
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
 }
 
 #SubmitButton {
@@ -67,7 +90,6 @@ button {
 }
 
 #BigEngi {
-  color: #00aeef;
   font-weight: bolder;
 }
 
@@ -75,6 +97,8 @@ button {
   height: 100%;
   width: 100%;
   display: flex;
+  margin-top: 8px;
+  margin-bottom: 17px;
 }
 .column-left-content {
   padding-right: 10px;
@@ -82,6 +106,7 @@ button {
   align-content: flex-start;
 }
 .column-right-content {
+  margin-top: 13px;
   width: 60%;
   text-align: right;
   align-content: flex-end;
@@ -115,5 +140,7 @@ button {
   margin-top: 5%;
   font-size: 19px;
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 10%;
 }
+
