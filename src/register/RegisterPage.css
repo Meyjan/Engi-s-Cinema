@@ -28,7 +28,6 @@ button {
   width: 100%;
   padding: 12px 20px;
   margin-top: 8px;
-  margin-bottom: 17px;
   box-sizing: border-box;
   border-radius: 5px;
 }
@@ -98,12 +97,14 @@ button {
   width: 100%;
   display: flex;
   margin-top: 8px;
-  margin-bottom: 17px;
+  margin-bottom: 8px;
 }
 .column-left-content {
   padding-right: 10px;
   text-align: left;
   align-content: flex-start;
+  font-weight: normal;
+  font-size: 14px;
 }
 .column-right-content {
   margin-top: 13px;
@@ -134,6 +135,14 @@ button {
 .register-picture {
   float: left;
   width: 100%;
+}
+
+.error {
+  color: red;
+  font-family: "Arial", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
 }
 
 .title-font {
