@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2019 at 05:03 PM
+-- Generation Time: Sep 22, 2019 at 05:26 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.4
 
@@ -32,7 +32,8 @@ CREATE TABLE `movie_table` (
   `id` int(11) NOT NULL,
   `title` varchar(50) NOT NULL,
   `photo_link` varchar(100) NOT NULL,
-  `schedule` datetime NOT NULL
+  `date` date NOT NULL,
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
