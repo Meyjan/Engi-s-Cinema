@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="SearchPage.css" />
+        <link rel="stylesheet" type="text/css" href="../homepage/HomePage.css" />
+        <title>Search results for</title>
+    </head>
+
+    <body>
+        <div class = "content-black">
+            <nav>
+                <div class = "container">
+                    <label>
+                        <span id = "BlueEngi">Engi</span>ma
+                    </label>
+                    <form method = "GET" action = "">
+                        <input type= "text" placeholder = "Search movie"/>
+                        <button type="submit" class = "button-submit">
+                            <img src = "../homepage/vectorpaint.svg" class = "button-icon">
+                        </button>
+                    </form>
+
+
+                    <a href = "../login/LoginPage.html">
+                            Logout
+                    </a>
+                    <a href = "../transaction/TransactionPage.html">
+                            Transaction
+                    </a>
+                </div>
+            </nav>
+
+            <div class="search-result content-white">
+                <p id="return-text">Showing search results for keyword "Captain"</p>
+                <p id="return-count">14 results available</p>
+
+                <div class="lister">
+                    <ul class="return-list">
+                        <li class="return-container">
+                            <img src="cptmarvel.jpg" class="movie-poster">
+                            <div class="desc-box">
+                                <p id="return-title">Captain Marvel</p>
+                                <div id="movie-rating">
+                                    <img src="../../star.jpg" id="star">
+                                    <p id="score-rating">8.75</p>
+                                </div>
+                                <p id="movie-desc">
+                                    Carol Danvers become one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.
+                                </p>
+                            </div>
+
+                            <div class="detail-btn">
+                                    <a href="">View details</a>
+                            </div>
+                        </li>
+                        <hr>
+                        <li class="return-container">
+                            <img src="cptmarvel.jpg" class="movie-poster">
+                            <div class="desc-box">
+                                <p id="return-title">Captain Marvel</p>
+                                <div id="movie-rating">
+                                    <img src="star.jpg" id="star">
+                                    <p id="score-rating">8.75</p>
+                                </div>
+                                <p id="movie-desc">
+                                    Carol Danvers become one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.
+                                </p>
+                            </div>
+
+                            <div class="detail-btn">
+                                    <a href="">View details</a>
+                            </div>
+                        </li>
+                        <hr>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
