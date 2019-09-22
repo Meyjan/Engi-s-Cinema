@@ -22,8 +22,8 @@ $conn = openConnection();
 
 // Checking input errors
 /* Check username error */
-if (!preg_match("/.{5,}/", $username)) {
-    array_push($errorList, ["username", "Username not valid. Has to be at least 5 characters"]);
+if (!preg_match("/^[a-z0-9_]*$/", $username)) {
+    array_push($errorList, ["username", "Username not valid. Can only contains letters, numbers, and underscores"]);
 }
 $sql = "SELECT * FROM user_table WHERE username=\"" . $username . "\"";
 if (checkDataExists($conn, $sql)) {
@@ -47,8 +47,8 @@ if (strcmp($password, $confirmpass)) {
 }
 
 /* Check phone error */
-if (!preg_match("/^[0-9\-\(\)\/\+\s]*$/", $phone)) {
-    array_push($errorList, ["phone", "Phone number must only contain +, -, /, or digits"]);
+if (!preg_match("/^[0-9]{7,9}$/", $phone)) {
+    array_push($errorList, ["phone", "Phone number can only contain digits with length 7 - 9"]);
 }
 $sql = "SELECT * FROM user_table WHERE phone_number=\"" . $phone . "\"";
 if (checkDataExists($conn, $sql)) {
@@ -81,14 +81,29 @@ if (empty($errorList)) {
 
     $sql = "INSERT INTO user_table (username, email, phone_number, password, profile_pic) VALUES (\"" . 
     $username . "\", \"" . $email . "\", \"" . $phone . "\", \"" . $password_hash . "\", \"" . $photo . "\")";
-
-    array_push($errorList, ["photo", $sql]);
             
     if ($conn -> query($sql) !== TRUE) {
         array_push($errorList, ["username", "Failure in database connection"]);
     }
 
-    move_uploaded_file($_FILES['photo']['tmp_name'], $target_file);
+    move_uploaded_file($_FILES['photo']['tmp_name'], $photo);
+
+    // Setting cookie
+    $cookie_name = "login_cookie";
+    $cookie_value = "I'm a weeb " . $email;
+
+    setcookie($cookie_name, $cookie_value, time() + 3600);
+
+    if (isset($_COOKIE["login_cookie"])) {
+        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\"WHERE email=\"" . $email . "\"";
+        if ($conn -> query($sql) !== TRUE) {
+            array_push($errorList, ["photo", "Failure in saving cookie in database"]);
+        }
+    }
+    else {
+        array_push($errorList, ["photo", "Failure in cookie creation"]);
+    }
+    
 }
 
 
