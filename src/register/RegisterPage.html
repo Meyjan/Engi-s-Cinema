@@ -3,7 +3,7 @@
   <head>
     <title>Engima Film - Register</title>
     <link rel = "stylesheet" type = "text/css" href = "RegisterPage.css" />
-    <script type = "text/javascript" src = "RegisterPage.js"></script>
+
   </head>
   <body>
     <div class = "container">
@@ -14,49 +14,54 @@
           </div>
            
         </div>
-        
-        <div>
-        <form action = "RegisterPage.php" method = "POST">
+        <form method = "POST" name = "form_registration" id="form_registration">
 
           <label for = "username">Username</label>
           <input type = "text" placeholder = "joe.johndoe" name = "username" required>
+          <div id = "username-error" class = "error"></div>
           
 
           <label for = "email">Email Address</label>
           <input type = "email" placeholder = "joe@email.com" name = "email" required>
+          <div id = "email-error" class = "error"></div>
           
 
           <label for = "phone">Phone Number</label>
           <input type = "text" placeholder = "+62813xxxxxxxx" name = "phone" required/>
+          <div id = "phone-error" class = "error"></div>
           
 
           <label for = "password">Password</label>
           <input type = "password" placeholder = "make as strong as possible" name = "password" required>
+          <div id = "password-error" class = "error"></div>
           
 
           <label for = "confirm_password">Confirm Password</label>
           <input type = "password" placeholder = "same as above" name = "confirm_password" required>
+          <div id = "confirm_password-error" class = "error"></div>
           
           
-          <label for = "confirm_password">Profile Picture</label>
+          <label for = "photo">Profile Picture</label>
           <div class = "column-content">
             <div class = "column-left-content">
-              <label id = "InputFile">
+              <label id = "InputFile" name = "InputFile">
+                
+              </label>
             </div>
             <div class = "column-right-content">
-              
-              <input type="file" id = "file" name = "image_upload", accept = ".jpg, .jpeg, .png">
+              <input type="file" id = "file" name = "photo", accept = ".jpg, .jpeg, .png" onchange="fileNameUpdate()">
               <label for = "file">Browse</label>
             </div>
           </div>
+          <div id = "photo-error" class = "error"></div>
 
           
-          <button type = "submit" id = "SubmitButton">Register</button>
+          <input type = "submit" id = "SubmitButton" value = "Register">
           
           <p>Already have account? <a href = "../login/LoginPage.html">Login here</a></p>
-        </div>
+        </form>
       </div>
-      </form>
     </div>
+    <script type = "text/javascript" src = "RegisterPage.js"></script>
   </body>
 </html>
