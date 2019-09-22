@@ -20,12 +20,10 @@ $validLogin = TRUE;
 
 // Checking input errors
 /* Check email and password error */
-$sql = "SELECT * FROM user_table WHERE email=\"" . $email . "\"";
+$sql = "SELECT username FROM user_table WHERE email=\"" . $email . "\"";
 if (checkDataExists($conn, $sql)) {
     $sql2 = "SELECT password FROM user_table WHERE email=\"" . $email . "\"";
     $password_hash = executeSql($conn, $sql2);
-    $password_hash = mysqli_fetch_row($password_hash);
-    $password_hash = $password_hash[0];
     if (!password_verify($password, $password_hash)){
         $validLogin = FALSE;
     }
@@ -35,7 +33,23 @@ else {
 }
 
 // Executing login
-$result = ($validLogin) ? 200 : 403;
+if ($validLogin) {
+    $cookie_name = "login_cookie";
+    $cookie_value = "I'm a weeb " . $email;
+
+    setcookie($cookie_name, $cookie_value, time() + 3600);
+    $result = 200;
+    
+    if (isset($_COOKIE["login_cookie"])) {
+        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\"WHERE email=\"" . $email . "\"";
+        if ($conn -> query($sql) !== TRUE) {
+            $result = 500;
+        }
+    }    
+}
+else {
+    $result = 401;
+}
 echo ($result);
 
 ?>

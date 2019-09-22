@@ -1,3 +1,23 @@
+window.onload = function() {
+    cookieLogin();
+};
+
+function cookieLogin() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "LoginPageCookie.php");
+    request.send();
+
+    request.onload = () => {
+        let response = parseInt(request.response);
+        alert("Response accepted");
+        alert(response);
+        if (response == 200) {
+            alert("Cookie login accepted");
+            window.location.replace('../homepage/Homepage.html');
+        }
+    }
+} 
+
 function formCheck(e) {
     let form = new FormData(document.forms.form_login);
 
@@ -9,19 +29,12 @@ function formCheck(e) {
 
     request.onload = () => {
         let response = request.response;
-
-        if (response.length == 0) {
+        response = parseInt(response)
+        if (response == 200) {
             window.location.replace('../homepage/Homepage.html');
         }
         else {
-            response = parseInt(response)
-            alert(response);
-            if (response == 200) {
-                alert ("Login success");
-            }
-            else {
-                alert ("Login failed");
-            }
+            document.getElementById('login-error').innerHTML = "Login failed. Username and password doesn't match with the data in database";
         }
     };
 

@@ -33,7 +33,7 @@ input[type="password"] {
   border-radius: 5px;
 }
 
-button {
+#SubmitLogin {
   border-style: solid;
   border-radius: 7px;
   background-color: #00aeef;
