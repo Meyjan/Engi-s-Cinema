@@ -6,7 +6,7 @@ include "../utility/SqlUtility.php";
 
 // Get movie for today's date
 $conn = openConnection();
-$sql = "SELECT id, title, photo_link FROM movie_table WHERE DATE(date) = CURRENT_DATE()";
+$sql = "SELECT id, title, photo_link FROM movie_table join movie_schedule_table on (movie_table.id = movie_schedule_table.movie_id) WHERE DATE(date) = CURRENT_DATE()";
 $response =  mysqli_query($conn, $sql);
 
 

@@ -4,7 +4,7 @@ function openConnection() {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "engima_movie_db";
+    $dbname = "engima_movie";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
