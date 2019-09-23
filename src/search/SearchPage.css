@@ -38,9 +38,15 @@ hr {
     height: 12em;
 }
 .detail-btn {
-    margin-left: 32.5%;
+    margin-left: 30%;
     margin-bottom: 0;
     max-height: 2em;
+}
+.detail-btn > img {
+    width: 1em;
+    height: 1em;
+    padding-left: 0.25em;
+    bottom: 0;
 }
 .detail-btn > a {
     text-decoration: none;
