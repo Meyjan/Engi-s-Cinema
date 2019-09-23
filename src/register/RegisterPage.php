@@ -22,7 +22,7 @@ $conn = openConnection();
 
 // Checking input errors
 /* Check username error */
-if (!preg_match("/^[a-z0-9_]*$/", $username)) {
+if (!preg_match("/^[A-Za-z0-9_]*$/", $username)) {
     array_push($errorList, ["username", "Username not valid. Can only contains letters, numbers, and underscores"]);
 }
 $sql = "SELECT * FROM user_table WHERE username=\"" . $username . "\"";
@@ -92,7 +92,7 @@ if (empty($errorList)) {
     $cookie_name = "login_cookie";
     $cookie_value = "I'm a weeb " . $email;
 
-    setcookie($cookie_name, $cookie_value, time() + 3600);
+    setcookie($cookie_name, $cookie_value, time() + 3600, '/');
 
     if (isset($_COOKIE["login_cookie"])) {
         $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\"WHERE email=\"" . $email . "\"";
