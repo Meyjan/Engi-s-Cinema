@@ -37,11 +37,12 @@ if ($validLogin) {
     $cookie_name = "login_cookie";
     $cookie_value = "I'm a weeb " . $email;
 
-    setcookie($cookie_name, $cookie_value, time() + 3600);
+    setcookie($cookie_name, $cookie_value, time() + 3600, '/');
     $result = 200;
     
     if (isset($_COOKIE["login_cookie"])) {
-        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\"WHERE email=\"" . $email . "\"";
+        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\" WHERE email=\"" . $email . "\"";
+        echo($result);
         if ($conn -> query($sql) !== TRUE) {
             $result = 500;
         }
