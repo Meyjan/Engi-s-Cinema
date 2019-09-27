@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Engima Film - Booking</title>
+        <link rel = "stylesheet" type = "text/css" href = "BookingPage.css" />
+    </head>
+
+    <body>
+        <nav>
+            <div class = "container">
+                <label>
+                    <span id = "BlueEngi">Engi</span>ma
+                </label>
+                <form method = "GET" action = "">
+                    <input type= "text" placeholder = "Search movie"/>
+                    <button type="submit" class = "button-submit">
+                        <img src = "vectorpaint.svg" class = "button-icon" onclick = "searchMovie()">
+                    </button>
+                </form>
+                
+
+                <a onclick = logout()>
+                    Logout
+                </a>
+                <a href = "../transaction/TransactionPage.html">
+                    Transaction
+                </a>
+            </div>
+        </nav>
+
+        <div class = "content-white">
+            <div class = "first-container">
+                <img src = "left_arrow.png" class = "left-arrow">
+                <div class = "first-inner-container">
+                    <div class = "title-test">Avengers: Endgame</div>
+                    <div class = "date-test">September 4, 2019 - 09.40 PM</div>
+                </div>
+            </div>
+            <div class = "second-container">
+                <div class = "seat-container">
+                    <button class = "seat">1</button>
+                    <button class = "seat">2</button>
+                    <button class = "seat">3</button>
+                    <button class = "seat">4</button>
+                    <button class = "seat">5</button>
+                    <button class = "seat" disabled = True>6</button>
+                    <button class = "seat">7</button>
+                    <button class = "seat">8</button>
+                    <button class = "seat">9</button>
+                    <button class = "seat">10</button>
+                    <button class = "seat">11</button>
+                    <button class = "seat">12</button>
+                    <button class = "seat">13</button>
+                    <button class = "seat">14</button>
+                    <button class = "seat">15</button>
+                    <button class = "seat">16</button>
+                    <button class = "seat">17</button>
+                    <button class = "seat">18</button>
+                    <button class = "seat">19</button>
+                    <button class = "seat">20</button>
+                    <button class = "seat">21</button>
+                    <button class = "seat">22</button>
+                    <button class = "seat">23</button>
+                    <button class = "seat">24</button>
+                    <button class = "seat">25</button>
+                    <button class = "seat">26</button>
+                    <button class = "seat">27</button>
+                    <button class = "seat">28</button>
+                    <button class = "seat">29</button>
+                    <button class = "seat">30</button>
+                    <div class = "screen-seat">Screen</div>
+                </div>
+                <div class = "book-container">
+                    <div class = "book-title">
+                        Booking Summary
+                    </div>
+                    <div class = "empty-summary" hidden = True>You haven't selected any seat yet. Please click on one of the seat provided</div>
+                    <div class = "filled-summary">
+                        <div class = "movie-title">
+                            Avengers: Endgame
+                        </div>
+                        <div class = "movie-schedule">
+                            September 4, 2019 - 09.40 PM
+                        </div>
+                        <div class = "movie-definition">
+                            <div class = "movie-seat">
+                                Seat #18
+                            </div>
+                            <div class = "movie-price">
+                                Rp 45.000
+                            </div>
+                        </div>
+                        <button class = "buy-ticket">
+                            Buy Ticket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type = "text/javascript" src = "BookingPage.js"></script>
+    </body>
+</html>
