@@ -58,11 +58,20 @@ button > img {
     text-decoration: none;
     color: #4bb8e2;
 }
-.return-title {
+#return-text {
+    font-size: 20px;
+}
+#return-count {
+    color: #6b6b6b;
+}
+#return-title {
     font-size: 1.4em;
     margin-bottom: 0.5%;
 }
-.movie-rating {
+#movie-desc {
+    font-weight: normal;
+}
+#movie-rating {
     padding-top: 0;
     max-width: 10em;
     max-height: 2em;
@@ -70,20 +79,34 @@ button > img {
     flex-direction: row;
     align-items: center;
 }
-.movie-desc {
-    font-weight: normal;
-}
-.score-rating {
+#score-rating {
     color: #6b6b6b;
 }
-.star {
+#star {
     width: 1.5em;
     height: 1.5em;
     margin-right: 0.25em;
 }
-#return-text {
-    font-size: 20px;
+
+.page-container {
+    width: 100%;
+    height: 40px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
-#return-count {
-    color: #6b6b6b;
+
+.page-container .page-element {
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    width: 40px;
+    border: 1px deepskyblue solid;
+    color: deepskyblue;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10%;
 }

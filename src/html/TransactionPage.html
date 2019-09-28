@@ -4,6 +4,7 @@
     <head>
         <title>Engima Film - Transaction</title>
         <link rel = "stylesheet" type = "text/css" href = "../css/TransactionPage.css" />
+        <script type = "text/javascript" src = "../js/SearchBar.js"></script>
     </head>
 
     <body>
@@ -12,10 +13,10 @@
                 <label>
                     <span id = "BlueEngi">Engi</span>ma
                 </label>
-                <form method = "GET" action = "">
-                    <input type= "text" placeholder = "Search movie"/>
-                    <button type="submit" class = "button-submit">
-                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon" onclick = "searchMovie()">
+                <form method = "GET" action = "SearchPage.html">
+                    <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                    <button class = "button-submit" type = "submit">
+                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
                     </button>
                 </form>
                 
