@@ -70,6 +70,9 @@ if ($_FILES['photo']['name'] != "") {
     }
     $photo = $target_file;
 }
+else {
+    array_push($errorList, ["photo", "No photos of user. Please insert one"]);
+}
 
 
 /* Executing register */

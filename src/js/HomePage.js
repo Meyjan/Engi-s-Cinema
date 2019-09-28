@@ -75,7 +75,7 @@ function showMovies() {
                 movie_rating.className = "movie-rating";
 
                 let star = document.createElement('img');
-                star.src = "star.png";
+                star.src = "../data/icons/star.png";
                 let rating = document.createElement('div');
                 rating.className = "rate-num";
                 rating.innerHTML = movie_data[2];
