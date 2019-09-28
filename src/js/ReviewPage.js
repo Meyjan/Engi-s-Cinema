@@ -1,3 +1,7 @@
+window.onload = function () {
+    checkButton
+}
+
 function selectValue(e) {
     // Make stars yellow
     let starValue = Number(e.getAttribute("pepega"));
