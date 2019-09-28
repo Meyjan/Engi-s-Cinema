@@ -11,26 +11,24 @@
           <div class= "title-font">
             Welcome to <span id = "BigEngi">Engi</span>ma!
           </div>
-          <br/> <br/>
         </div>
         
-        <div>
-        <form action = "LoginPage.php" method = "POST">
+        <form id = "form_login" method = "POST">
 
             <label for = "email">Email</label>
             <input type = "email" placeholder = "Enter your email here" name = "email" required>
-            <br/>
+            
 
             <label for = "password">Password</label>
             <input type = "password" placeholder = "Enter your password here" name = "password" required>
-            <br/> <br/>
+            <div id = "login-error" class = "error"></div>
 
-            <button type = "submit">Login</button>
+            <input type = "submit" id = "SubmitLogin" value = "Login">
             
             <p>Don't have an account? <a href = "../register/RegisterPage.html">Register here</a></p>
-        </div>
+        </form>
       </div>
-      </form>
     </div>
+    <script type = "text/javascript" src = "LoginPage.js"></script>
   </body>
 </html>

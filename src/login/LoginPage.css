@@ -4,7 +4,7 @@ form {
   margin-right: 5%;
 }
 
-label {
+label{
   font-size: 12px;
   font-weight: bold;
   font-family: "Arial", sans-serif;
@@ -33,7 +33,7 @@ input[type="password"] {
   border-radius: 5px;
 }
 
-button {
+#SubmitLogin {
   border-style: solid;
   border-radius: 7px;
   background-color: #00aeef;
@@ -52,6 +52,14 @@ button {
   flex-direction: column;
   text-align: center;
   padding: 30px;
+}
+
+.error {
+  color: red;
+  font-family: "Arial", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
 }
 
 .login-box {
