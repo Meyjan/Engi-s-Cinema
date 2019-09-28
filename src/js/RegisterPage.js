@@ -6,7 +6,7 @@ function formCheck(e) {
     let form = new FormData(document.forms.form_registration);
 
     let request = new XMLHttpRequest();
-    request.open("POST", "RegisterPage.php");
+    request.open("POST", "../php/RegisterPage.php");
     request.send(form);
 
     document.getElementById('username-error').innerHTML = "";
@@ -22,7 +22,7 @@ function formCheck(e) {
         console.log(response);
 
         if (response.length == 0) {
-            window.location.replace('../login/LoginPage.html');
+            window.location.replace('../html/LoginPage.html');
         }
         else {
             response = response.split(";;");

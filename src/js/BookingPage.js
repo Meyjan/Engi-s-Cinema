@@ -4,7 +4,7 @@ function openModal() {
 }
 
 function closeModal() {
-    window.location.replace("../transaction/TransactionPage.html")
+    window.location.replace("../html/TransactionPage.html")
 }
 
 let modal = document.getElementById("modal-container");

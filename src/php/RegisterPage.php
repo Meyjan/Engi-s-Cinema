@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "../utility/SqlConnection.php";
-include "../utility/SqlUtility.php";
+include "SqlConnection.php";
+include "SqlUtility.php";
 
 
 // Processing data from javascript

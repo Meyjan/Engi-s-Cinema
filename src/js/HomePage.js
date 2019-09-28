@@ -5,7 +5,7 @@ window.onload = function() {
 
 function identifyUser() {
     let request = new XMLHttpRequest();
-    request.open("GET", "HomePageUser.php");
+    request.open("GET", "../php/HomePageUser.php");
     request.send();
 
     request.onload = () => {
@@ -13,7 +13,7 @@ function identifyUser() {
 
         if (response == "-999") {
             alert("Need to login first");
-            window.location.replace('../login/LoginPage.html');
+            window.location.replace('../html/LoginPage.html');
         }
         else {
             document.getElementById("BlueEngiNotSoBold").innerHTML = response;
@@ -23,7 +23,7 @@ function identifyUser() {
 
 function logout() {
     let request = new XMLHttpRequest();
-    request.open("GET", "../utility/Logout.php");
+    request.open("GET", "../php/Logout.php");
     request.send();
 
     request.onload = () => {
@@ -33,14 +33,14 @@ function logout() {
             alert("Server is not right at the moment");
         }
         else {
-            window.location.replace('../login/LoginPage.html');
+            window.location.replace('../html/LoginPage.html');
         }
     }
 }
 
 function showMovies() {
     let request = new XMLHttpRequest();
-    request.open("GET", "HomePage.php");
+    request.open("GET", "../php/HomePage.php");
     request.send();
 
     request.onload = () => {
