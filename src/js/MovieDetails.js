@@ -1,8 +1,11 @@
 window.onload = function() {
     this.loadMovie(event);
+    this.loadSchedule(event);
+    this.loadReview(event);
 }
 
-function loadMovie() {
+function loadMovie(e) {
+    alert("Test called");
     let idValue = new URL(window.location.href);
     idValue = idValue.searchParams.get("id");
 
@@ -34,7 +37,7 @@ function loadSchedule(e) {
 
     let request = new XMLHttpRequest();
     let param = "id=" + idValue;
-    request.open("GET", "..php/LoadSchedule.php"+"?"+param, true);
+    request.open("GET", "../php/LoadSchedule.php"+"?"+param, true);
     request.send();
 
     obj = null;
@@ -61,9 +64,10 @@ function loadSchedule(e) {
 
             let scheduleBook = document.createElement('td');
             scheduleBook.className = "book-btn";
+            
 
             let bookButton = document.createElement('button');
-            if (seat_count == 0) {
+            if (obj[i].seat_count == 0) {
                 bookButton.className = "not-avail";
             } else {
                 bookButton.className = "avail";
@@ -96,7 +100,7 @@ function loadReview(e) {
 
     let request = new XMLHttpRequest();
     let param = "id=" + idValue;
-    request.open("GET", "..php/LoadReview.php"+"?"+param, true);
+    request.open("GET", "../php/LoadReview.php"+"?"+param, true);
     request.send();
 
     obj = null;
@@ -123,20 +127,26 @@ function loadReview(e) {
             let userName = document.createElement('p');
             userName.innerHTML = obj[i].username;
             userName.style.color = "#818181";
+            userName.id = "username";
 
             let userRating = document.createElement('div');
             userRating.className = "user-rating";
 
             let star = document.createElement('img');
             star.src = "../data/icons/star.png";
+
+            let userScore = document.createElement('span');
+            userScore.innerHTML = obj[i].rating;
+            userScore.className = "user-score";
             
-            document.getElementById('user-score').innerHTML = obj[i].rating;
+            // document.getElementById('user-score').innerHTML = obj[i].rating;
 
             let review_desc = document.createElement('div');
             review_desc.className = "review-desc";
             review_desc.innerHTML = obj[i].review;
 
             userRating.appendChild(star);
+            userRating.appendChild(userScore);
 
             reviewContent.appendChild(userName);
             reviewContent.appendChild(userRating);

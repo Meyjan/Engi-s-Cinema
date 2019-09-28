@@ -13,7 +13,7 @@
         $conn = openConnection();
         $sql = "SELECT rating, review, username, profile_pic
                 FROM movie_user_table NATURAL JOIN user_table
-                WHERE movie_id = $id LIMIT 3";
+                WHERE movie_id = " . $idValue . " LIMIT 3";
         $response = mysqli_query($conn, $sql);
 
         if (!empty($response)) {

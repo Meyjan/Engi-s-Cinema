@@ -11,20 +11,28 @@
         $idValue = $_GET["id"];
 
         $conn = openConnection();
-        $sql = "SELECT schedule_id, date, time, (30 - COUNT(seat_num)) AS seat_count
-                FROM movie_schedule_table NATURAL JOIN movie_user_table
-                WHERE movie_schedule_table.movie_id = $idValue ORDER BY date GROUP BY schedule_id";
+        $sql = "SELECT schedule_id, date, time, (30 - COUNT(seat_number)) AS seat_count
+                FROM movie_schedule_table JOIN movie_user_table USING (schedule_id)
+                WHERE movie_schedule_table.movie_id = " . $idValue . " GROUP BY schedule_id ORDER BY date";
         $response = mysqli_query($conn, $sql);
 
-        if (!empty($response)) {
-            $result = array();
+        $result = array();
 
-            while ($r = mysqli_fetch_assoc($response)) {
-                $result[] = $r;
-            }
-
-            echo (json_encode($result));
+        while ($r = mysqli_fetch_assoc($response)) {
+            $result[] = $r;
         }
-    }
 
+        $sql = "SELECT schedule_id, date, time, 30 AS seat_count
+                FROM movie_schedule_table
+                WHERE movie_schedule_table.movie_id = " . $idValue . " 
+                AND movie_schedule_table.schedule_id NOT IN (SELECT schedule_id FROM movie_user_table)
+                GROUP BY schedule_id ORDER BY date";
+        $response = mysqli_query($conn, $sql);
+
+        while ($r = mysqli_fetch_assoc($response)) {
+            $result[] = $r;
+        }
+
+        echo (json_encode($result));
+    }
 ?>
