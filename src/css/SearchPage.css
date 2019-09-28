@@ -111,3 +111,8 @@ button > img {
     margin-right: 10px;
     margin-bottom: 10%;
 }
+
+.page-container .page-element:disabled {
+    border: 1px gray solid;
+    color: gray;
+}
