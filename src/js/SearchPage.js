@@ -5,7 +5,7 @@ var total_page;
 window.onload = function() {
     curr_page = 1;
     this.beginSearch(event);
-    this.console.log("Result = " + result);
+    this.controlButtons();
 }
 
 
@@ -65,6 +65,9 @@ function beginSearch(e) {
             let dtl_btn = document.createElement('button');
             dtl_btn.className = "detail-btn";
             dtl_btn.id = obj[i].id;
+            dtl_btn.addEventListener('click', function() {
+                window.location = "MovieDetails.html?id=" + dtl_btn.id;
+            });
 
             let dtl_txt = document.createElement('a');
             dtl_txt.innerHTML = "View details";
@@ -95,12 +98,36 @@ function beginSearch(e) {
         }
 
         window.total_page = Math.ceil(obj.length / 5);
+        
+        buttonsContainer = document.getElementById("p-container");
+        newElement = document.createElement("button");
+        newElement.className = "page-element";
+        newElement.innerHTML = "Back";
+        newElement.id = "Back";
+        buttonsContainer.appendChild(newElement);
 
-        // Adding buttons of paging
 
+        for (let i = 1; i <= total_page; i++) {
+            newElement = document.createElement("button");
+            newElement.className = "page-element";
+            newElement.innerHTML = i;
+            newElement.id = i;
+            buttonsContainer.appendChild(newElement);
+        }
 
+        newElement = document.createElement("button");
+        newElement.className = "page-element";
+        newElement.innerHTML = "Next";
+        newElement.id = "Next";
+        buttonsContainer.appendChild(newElement);
     }
     e.preventDefault();
+}
+
+function controlButtons() {
+    if (curr_page == 1) {
+        curr_page = -1;
+    }
 }
 
 function logout() {
@@ -119,4 +146,8 @@ function logout() {
             window.location.replace('../html/LoginPage.html');
         }
     }
+}
+
+function gotoPage(id) {
+    alert("Clicked");
 }
