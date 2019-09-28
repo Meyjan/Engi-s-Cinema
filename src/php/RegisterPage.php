@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "../utility/SqlConnection.php";
-include "../utility/SqlUtility.php";
+require "SqlConnection.php";
+require "SqlUtility.php";
 
 
 // Processing data from javascript
@@ -55,7 +55,7 @@ if (checkDataExists($conn, $sql)) {
     array_push($errorList, ["phone", "Phone number already exists in the database. Insert a new one"]);
 }
 
-$photo = NULL;
+$photo = null;
 /* Check photo error */
 if ($_FILES['photo']['name'] != "") {
     $target_file = $target_dir . basename($_FILES["photo"]["name"]);
@@ -63,11 +63,9 @@ if ($_FILES['photo']['name'] != "") {
     $check = getimagesize($_FILES["photo"]["tmp_name"]);
     if ($check === false) {
         array_push($errorList, ["photo", "File is not a photo"]);
-    }
-    else if (file_exists($target_file)) {
+    } else if (file_exists($target_file)) {
         array_push($errorList, ["photo", "Cannot add photo with the same name. File already exists"]);
-    }
-    else if ($_FILES["photo"]["size"] > 200000) {
+    } else if ($_FILES["photo"]["size"] > 200000) {
         array_push($errorList, ["photo", "Photo size is larger than 200kB, make smaller ones. "]);
     }
     $photo = $target_file;
@@ -82,7 +80,7 @@ if (empty($errorList)) {
     $sql = "INSERT INTO user_table (username, email, phone_number, password, profile_pic) VALUES (\"" . 
     $username . "\", \"" . $email . "\", \"" . $phone . "\", \"" . $password_hash . "\", \"" . $photo . "\")";
             
-    if ($conn -> query($sql) !== TRUE) {
+    if ($conn -> query($sql) !== true) {
         array_push($errorList, ["username", "Failure in database connection"]);
     }
 
@@ -96,16 +94,14 @@ if (empty($errorList)) {
 
     if (isset($_COOKIE["login_cookie"])) {
         $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\"WHERE email=\"" . $email . "\"";
-        if ($conn -> query($sql) !== TRUE) {
+        if ($conn -> query($sql) !== true) {
             array_push($errorList, ["photo", "Failure in saving cookie in database"]);
         }
-    }
-    else {
+    } else {
         array_push($errorList, ["photo", "Failure in cookie creation"]);
     }
     
 }
-
 
 closeConnection($conn);
 
