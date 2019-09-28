@@ -14,9 +14,9 @@
             <label>
                 <span id = "BlueEngi">Engi</span>ma
             </label>
-            <form method = "GET" action = "">
-                <input type= "text" placeholder = "Search movie"/>
-                <button type="submit" class = "button-submit">
+            <form method = "GET" action = "SearchPage.html">
+                <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                <button class = "button-submit" type = "submit">
                     <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
                 </button>
             </form>
@@ -33,7 +33,7 @@
 
     <div class="content-white movie-details">
         <div class="movie-content">
-            <img src="../data/photos/cptmarvel.jpg" class="movie-poster">
+            <img src="../data/photos/cptmarvel.jpg" id="movie-poster">
             
             <div class="movie-desc">
                 <p id="movie-title">Avengers: Endgame</p>
@@ -69,98 +69,17 @@
                         <th>Available Seats</th>
                         <th></th>
                     </tr>
-                    <tr>
-                        <td>September 3, 2019</td>
-                        <td>06.30 PM</td>
-                        <td>10 seats</td>
-                        <td class="book-btn">
-                                <button style="font-family: inherit" class="avail">
-                                    Book Now
-                                    <img src="../data/icons/detail_btn.png">
-                                </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>September 5, 2019</td>
-                        <td>06.30 PM</td>
-                        <td>25 seats</td>
-                        <td class="book-btn">
-                            <button style="font-family: inherit" class="avail">
-                                Book Now
-                                <img src="../data/icons/detail_btn.png">
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>September 5, 2019</td>
-                        <td>08.20 PM</td>
-                        <td>0 seats</td>
-                        <td class="book-btn">
-                            <button style="font-family: inherit" class="avail">
-                                Book Now
-                                <img src="../data/icons/detail_btn.png">
-                            </button>
-                        </td>
-                    </tr>
                 </table>
             </div>
 
             <div class="box-entity" id="movie-review">
                 <p style="font-size: 2em">Reviews</p>
 
-                <div class="user-review">
-                    <img src="../data/photos/bari.jpg" class="avatar">
-
-                    <div class="review-content">
-                        <p id="username" style="color: #818181">bariancrot</p>
-
-                        <div class="user-rating">
-                            <img src="../img/icons/star.jpg">
-                            <p><span id="user-score">8</span>/10</p>
-                        </div>
-
-                        <div class="review-desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu augue diam. Mauris vestibulum suscipit aliquet. Ut porta suscipit neque, porttitor pharetra libero tincidunt vitae.
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="user-review">
-                    <img src="../img/photos/bari.jpg" class="avatar">
-
-                    <div class="review-content">
-                        <p id="username" style="color: #818181">bariancrot</p>
-
-                        <div class="user-rating">
-                            <img src="../img/icons/star.jpg">
-                            <p><span id="user-score">8</span>/10</p>
-                        </div>
-
-                        <div class="review-desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu augue diam. Mauris vestibulum suscipit aliquet. Ut porta suscipit neque, porttitor pharetra libero tincidunt vitae.
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="user-review">
-                    <img src="../img/photos/bari.jpg" class="avatar">
-
-                    <div class="review-content">
-                        <p id="username" style="color: #818181">bariancrot</p>
-
-                        <div class="user-rating">
-                            <img src="../img/icons/star.jpg">
-                            <p><span id="user-score">8</span>/10</p>
-                        </div>
-
-                        <div class="review-desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu augue diam. Mauris vestibulum suscipit aliquet. Ut porta suscipit neque, porttitor pharetra libero tincidunt vitae.
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
+    <script type = "text/javascript" src = "../js/MovieDetails.js"></script>
 
 </body>
 </html>

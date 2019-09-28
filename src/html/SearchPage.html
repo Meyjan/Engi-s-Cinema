@@ -16,70 +16,37 @@
                     <label>
                         <span id = "BlueEngi">Engi</span>ma
                     </label>
-                    <form method = "GET" action = "">
-                        <input type= "text" placeholder = "Search movie"/>
-                        <button type="submit" class = "button-submit">
+                    <form method = "GET" action = "SearchPage.html">
+                        <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                        <button class = "button-submit" type = "submit">
                             <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
                         </button>
                     </form>
 
 
-                    <a href = "LoginPage.html">
-                            Logout
+                    <a onclick = "logout()">
+                        Logout
                     </a>
                     <a href = "TransactionPage.html">
-                            Transactions
+                        Transactions
                     </a>
                 </div>
             </nav>
 
             <div class="search-result content-white">
-                <p id="return-text">Showing search results for keyword "Captain"</p>
-                <p id="return-count">14 results available</p>
+                <p id="return-text">Search Result for </p>
+                <p id="return-count"><span id="num-count">14</span> results available</p>
 
                 <div class="lister">
-                    <ul class="return-list">
-                        <li class="return-container">
-                            <img src="../data/photos/cptmarvel.jpg" class="movie-poster">
-                            <div class="desc-box">
-                                <p class="return-title">Captain Marvel</p>
-                                <div class="movie-rating">
-                                    <img src="../data/icons/star.png" id="star">
-                                    <p class="score-rating">8.75</p>
-                                </div>
-                                <p class="movie-desc">
-                                    Carol Danvers become one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.
-                                </p>
-                            </div>
-
-                            <button class="detail-btn" onclick = "viewMovie(this)">
-                                <a href="">View details</a>
-                                <img src="../data/icons/detail_btn.png">
-                            </button>
-                        </li>
-                        <hr>
-                        <li class="return-container">
-                            <img src="../data/photos/cptmarvel.jpg" class="movie-poster">
-                            <div class="desc-box">
-                                <p class="return-title">Captain Marvel</p>
-                                <div class="movie-rating">
-                                    <img src="../data/icons/star.jpg" class="star">
-                                    <p class="score-rating">8.75</p>
-                                </div>
-                                <p class="movie-desc">
-                                    Carol Danvers become one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.
-                                </p>
-                            </div>
-
-                            <button class="detail-btn">
-                                <a href="">View details</a>
-                                <img src="../data/icons/detail_btn.png">
-                            </button>
-                        </li>
-                        <hr>
+                    <ul class="return-list" id = "return-list-container">
+                        
                     </ul>
+                </div>
+
+                <div class="page-container" id = "p-container">
                 </div>
             </div>
         </div>
+        <script type = "text/javascript" src = "../js/SearchPage.js"></script>
     </body>
 </html>

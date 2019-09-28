@@ -13,4 +13,11 @@ function executeSql($conn, $sql)
     return $result[0];
 }
 
+function executeAllSql($conn, $sql)
+{
+    $result =  mysqli_query($conn, $sql);
+    $result = mysqli_fetch_all($result);
+    return $result;
+}
+
 ?>

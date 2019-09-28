@@ -51,7 +51,6 @@ function showMovies() {
             alert ("No movie showing today. Sorry for your inconvinience");
         }
         else {
-            alert("Resource get");
             response = response.split(";;");
 
             container = document.getElementById("movie-container");
@@ -92,8 +91,4 @@ function showMovies() {
             }
         }
     };
-}
-
-function searchMovie() {
-    
 }

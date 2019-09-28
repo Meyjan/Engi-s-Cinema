@@ -69,8 +69,7 @@ if ($_FILES['photo']['name'] != "") {
         array_push($errorList, ["photo", "Photo size is larger than 200kB, make smaller ones. "]);
     }
     $photo = $target_file;
-}
-else {
+} else {
     array_push($errorList, ["photo", "No photos of user. Please insert one"]);
 }
 

@@ -48,11 +48,6 @@ button > img {
     display: flex;
     flex-direction: column;
 }
-.movie-poster {
-    width: 16em;
-    height: 22em;
-    border-radius: 3%;
-}
 .movie-content {
     display: flex;
     margin-bottom: 2.5em;
@@ -129,6 +124,11 @@ button > img {
     margin-bottom: 0;
     color: #6b6b6b;
 }
+#movie-poster {
+    width: 16em;
+    height: 22em;
+    border-radius: 3%;
+}
 #movie-rating {
     display: flex;
     align-items: center;
@@ -170,7 +170,7 @@ button > img {
     margin-top: 2.5%;
     margin-bottom: 0;
 }
-#user-score {
+.user-score {
     font-size: 1.5em;
     margin-right: 10%;
     color: #5c595a;

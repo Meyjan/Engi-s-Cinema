@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
-
+ 
     <head>
         <title>Engima Film - Transaction</title>
         <link rel = "stylesheet" type = "text/css" href = "../css/TransactionPage.css" />
@@ -8,78 +8,31 @@
 
     <body>
         <nav>
-            <div class = "container">
+            <div class="container">
                 <label>
-                    <span id = "BlueEngi">Engi</span>ma
+                    <span id="BlueEngi">Engi</span>ma
                 </label>
-                <form method = "GET" action = "">
-                    <input type= "text" placeholder = "Search movie"/>
-                    <button type="submit" class = "button-submit">
-                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon" onclick = "searchMovie()">
+                <form method = "GET" action = "SearchPage.html">
+                    <input type= "text" placeholder = "Search movie" name = "searchVal"/>
+                    <button class = "button-submit" type = "submit">
+                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon">
                     </button>
                 </form>
-                
-
-                <a onclick = logout()>
+                <a onclick=logout()>
                     Logout
                 </a>
-                <a href = "TransactionPage.html">
+                <a href="TransactionPage.html">
                     Transaction
                 </a>
             </div>
         </nav>
 
-        <div class = "content-white">
-            <div class = "movie-title">Transaction History</div>
-            <div class = "movie-container" id = "movie-container" name = "movie-container">
-                <div class = "movie-item-top">
-                    <img class = "movie-image"  src = "../data/photos/Hayya.jpg">
-                    <div class = "movie-details">
-                        <div class = "details-title">
-                            Captain America: The Winter Soldier
-                        </div>
-                        <div class = "details-details">
-                            <span class = "blue-text">Schedule: </span> September 29, 2019 - 03.00 PM
-                        </div>
-                    </div>
-                </div>
-                <div class = "movie-item">
-                    <img class = "movie-image"  src = "../data/photos/JOKER.jpg">
-                    <div class = "movie-details">
-                        <div class = "details-title">
-                            Captain America: The First Avenger
-                        </div>
-                        <div class = "details-details">
-                            <span class = "blue-text">Schedule: </span> September 29, 2019 - 03.00 PM
-                        </div>
-                        <div class = "details-buttons">
-                            <button class = "button-add">
-                                Add Review
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class = "movie-item">
-                    <img class = "movie-image"  src = "../data/photos/One Piece.jpg">
-                    <div class = "movie-details">
-                        <div class = "details-title">
-                            Captain America: Civil War
-                        </div>
-                        <div class = "details-details">
-                            <span class = "blue-text">Schedule: </span> September 29, 2019 - 03.00 PM
-                        </div>
-                        <div class = "details-buttons">
-                            <button class = "button-delete">
-                                Delete Review
-                            </button>
-                            <button class = "button-edit">
-                                Edit Review
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        <div class="content-white">
+            <div class="movie-title">Transaction History</div>
+            <div class="movie-container" id="movie-container" name="movie-container">
+                
             </div>
+            <script type="text/javascript" src="../js/TransactionPage.js"></script>
         </div>
-        <script type = "text/javascript" src = "../js/HomePage.js"></script>
     </body>
 </html>
