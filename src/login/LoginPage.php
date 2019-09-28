@@ -42,7 +42,6 @@ if ($validLogin) {
     
     if (isset($_COOKIE["login_cookie"])) {
         $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\" WHERE email=\"" . $email . "\"";
-        echo($result);
         if ($conn -> query($sql) !== TRUE) {
             $result = 500;
         }
