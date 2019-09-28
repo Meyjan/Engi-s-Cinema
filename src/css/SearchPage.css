@@ -102,11 +102,17 @@ button > img {
     border-radius: 5px;
     text-align: center;
     padding-top: 10px;
-    height: 30px;
+    padding-bottom: 10px;
+    height: 40px;
     width: 40px;
     border: 1px deepskyblue solid;
     color: deepskyblue;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10%;
+}
+
+.page-container .page-element:disabled {
+    border: 1px gray solid;
+    color: gray;
 }
