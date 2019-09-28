@@ -7,7 +7,10 @@ function selectValue(e) {
     for (i = 0; i < elements.length; i++) {
         element = elements[i];
         if (element.getAttribute("pepega") <= starValue) {
-            element.src = "star.png"
+            element.src = "../data/icons/star.png"
+        }
+        if (element.getAttribute("pepega") > starValue) {
+            element.src = "../data/icons/gray_star.png"
         }
     }
 
