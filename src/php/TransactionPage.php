@@ -14,7 +14,7 @@ if (isset($_COOKIE["login_cookie"])) {
 $result = "-999";
 
 $conn = openConnection();
-$sql = "SELECT photo_link, title, date, time, review, id FROM movie_table INNER JOIN
+$sql = "SELECT photo_link, title, date, time, review, temp.id FROM movie_table INNER JOIN
             (SELECT movie_schedule_table.movie_id, date, time, review, movie_schedule_table.schedule_id AS id from movie_user_table INNER JOIN 
        		movie_schedule_table ON 
             movie_schedule_table.schedule_id = movie_user_table.schedule_id

@@ -53,7 +53,7 @@ function showHistory() {
                  
                 let buttoncon = $("<form>");
                 buttoncon.className = "details-button";
-                buttoncon.action = "../php/ReviewButtonhandling";
+                buttoncon.action = "../php/ReviewPage.php";
                 buttoncon.method = "get";
 
                 let delbut = $("<button>");
