@@ -98,6 +98,8 @@ nav input {
     width: 24px;   
 }
 
+
+
 .first-container {
     display: inline-block;
     margin-top: 3%;
@@ -108,7 +110,6 @@ nav input {
 }
 
 .first-inner-container {
-    display: block;
     display: flex;
     flex-direction: column;
     margin-left: 40px;
@@ -254,4 +255,66 @@ nav input {
     padding-left: 4%;
     padding-right: 4%;
     border : solid;
+}
+
+
+.modal-container{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container .modal-content {
+    background-color: white;
+    border-radius: 7px;
+    margin: 15% auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 25%;
+    height: 25%;
+    text-align: center;
+    justify-content: center;
+}
+
+.modal-container .modal-content .modal-title {
+    text-align: center;
+    color: green;
+    font-size: 20px;
+    margin-bottom: 8%;
+}
+
+.modal-container .modal-content .modal-text {
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+.close {
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.close p {
+    color:white;
+    font-size: 14px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

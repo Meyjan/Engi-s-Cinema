@@ -4,9 +4,24 @@
     <head>
         <title>Engima Film - Booking</title>
         <link rel = "stylesheet" type = "text/css" href = "BookingPage.css" />
+        <script type = "text/javascript" src = "BookingPage.js"></script>
     </head>
 
     <body>
+        <div class = "modal-container" id = "modal-container">
+            <div class = "modal-content">
+                <div class = "modal-title">
+                    Payment Success!
+                </div>
+                <div class = "modal-text">
+                    Thank you for purchasing! You can view your purchase now!
+                </div>
+                <button class = "close" id = "modal-close" onclick = "closeModal()" value = "Go To Transaction History">
+                    <p>Go To Transaction History</p>
+                </button>
+            </div>
+        </div>
+
         <nav>
             <div class = "container">
                 <label>
@@ -44,7 +59,7 @@
                     <button class = "seat">3</button>
                     <button class = "seat">4</button>
                     <button class = "seat">5</button>
-                    <button class = "seat" disabled = True>6</button>
+                    <button class = "seat">6</button>
                     <button class = "seat">7</button>
                     <button class = "seat">8</button>
                     <button class = "seat">9</button>
@@ -91,13 +106,12 @@
                                 Rp 45.000
                             </div>
                         </div>
-                        <button class = "buy-ticket">
+                        <button class = "buy-ticket" id = "buy-ticket" onclick = "openModal()">
                             Buy Ticket
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <script type = "text/javascript" src = "BookingPage.js"></script>
     </body>
 </html>
