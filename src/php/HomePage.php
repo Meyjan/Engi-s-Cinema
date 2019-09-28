@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "SqlConnection.php";
-include "SqlUtility.php";
+require "SqlConnection.php";
+require "SqlUtility.php";
 
 // Get movie for today's date
 $conn = openConnection();
@@ -10,11 +10,9 @@ $sql = "SELECT id, title, photo_link FROM movie_table join movie_schedule_table 
 $response =  mysqli_query($conn, $sql);
 
 
-if (empty($response))
-{
+if (empty($response)) {
     echo ("No movies at the moment");
-}
-else {
+} else {
     $response = mysqli_fetch_all($response);
     foreach ($response as $value) {
         $movie_id = $value[0];

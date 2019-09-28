@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "SqlConnection.php";
-include "SqlUtility.php";
+require "SqlConnection.php";
+require "SqlUtility.php";
 
 // Get movie for today's date
 $conn = openConnection();
