@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "../utility/SqlConnection.php";
-include "../utility/SqlUtility.php";
+require "../utility/SqlConnection.php";
+require "../utility/SqlUtility.php";
 
 // Check browser's cookie
 $cookie = "-999";
@@ -16,8 +16,7 @@ $sql = "SELECT * FROM user_table WHERE token=\"" . $cookie . "\"";
 $result = 0;
 if (checkDataExists($conn, $sql)) {
     $result = 200;
-}
-else {
+} else {
     $result = 401;
 }
 echo ($result);

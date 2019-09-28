@@ -93,3 +93,7 @@ function showMovies() {
         }
     };
 }
+
+function searchMovie() {
+    
+}

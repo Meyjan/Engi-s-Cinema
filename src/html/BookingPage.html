@@ -3,8 +3,8 @@
 
     <head>
         <title>Engima Film - Booking</title>
-        <link rel = "stylesheet" type = "text/css" href = "BookingPage.css" />
-        <script type = "text/javascript" src = "BookingPage.js"></script>
+        <link rel = "stylesheet" type = "text/css" href = "../css/BookingPage.css" />
+        <script type = "text/javascript" src = "../js/BookingPage.js"></script>
     </head>
 
     <body>
@@ -30,7 +30,7 @@
                 <form method = "GET" action = "">
                     <input type= "text" placeholder = "Search movie"/>
                     <button type="submit" class = "button-submit">
-                        <img src = "vectorpaint.svg" class = "button-icon" onclick = "searchMovie()">
+                        <img src = "../data/icons/vectorpaint.svg" class = "button-icon" onclick = "searchMovie()">
                     </button>
                 </form>
                 
@@ -38,7 +38,7 @@
                 <a onclick = logout()>
                     Logout
                 </a>
-                <a href = "../transaction/TransactionPage.html">
+                <a href = "TransactionPage.html">
                     Transaction
                 </a>
             </div>
@@ -46,7 +46,7 @@
 
         <div class = "content-white">
             <div class = "first-container">
-                <img src = "left_arrow.png" class = "left-arrow">
+                <img src = "../data/icons/left_arrow.png" class = "left-arrow">
                 <div class = "first-inner-container">
                     <div class = "title-test">Avengers: Endgame</div>
                     <div class = "date-test">September 4, 2019 - 09.40 PM</div>
@@ -90,7 +90,9 @@
                     <div class = "book-title">
                         Booking Summary
                     </div>
-                    <div class = "empty-summary" hidden = True>You haven't selected any seat yet. Please click on one of the seat provided</div>
+                    <div class = "empty-summary" hidden = True>
+                        You haven't selected any seat yet. Please click on one of the seat provided
+                    </div>
                     <div class = "filled-summary">
                         <div class = "movie-title">
                             Avengers: Endgame

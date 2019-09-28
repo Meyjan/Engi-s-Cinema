@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "../utility/SqlConnection.php";
-include "../utility/SqlUtility.php";
+require "../utility/SqlConnection.php";
+require "../utility/SqlUtility.php";
 
 
 // Processing data from javascript
@@ -15,7 +15,7 @@ $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
 $conn = openConnection();
 
 // Initiating variable
-$validLogin = TRUE;
+$validLogin = true;
 
 
 // Checking input errors
@@ -24,12 +24,11 @@ $sql = "SELECT username FROM user_table WHERE email=\"" . $email . "\"";
 if (checkDataExists($conn, $sql)) {
     $sql2 = "SELECT password FROM user_table WHERE email=\"" . $email . "\"";
     $password_hash = executeSql($conn, $sql2);
-    if (!password_verify($password, $password_hash)){
-        $validLogin = FALSE;
+    if (!password_verify($password, $password_hash)) {
+        $validLogin = false;
     }
-}
-else {
-    $validLogin = FALSE;
+} else {
+    $validLogin = false;
 }
 
 // Executing login
@@ -41,13 +40,13 @@ if ($validLogin) {
     $result = 200;
     
     if (isset($_COOKIE["login_cookie"])) {
-        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\" WHERE email=\"" . $email . "\"";
-        if ($conn -> query($sql) !== TRUE) {
+        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . 
+        "\" WHERE email=\"" . $email . "\"";
+        if ($conn -> query($sql) !== true) {
             $result = 500;
         }
     }    
-}
-else {
+} else {
     $result = 401;
 }
 echo ($result);

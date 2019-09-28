@@ -2,10 +2,9 @@
 
 $response = 200;
 
-if (isset( $_COOKIE["login_cookie"])) {
+if (isset($_COOKIE["login_cookie"])) {
     setcookie("login_cookie", "", time() - 3600, '/');
-}
-else {
+} else {
     $response = 500;
 }
 
