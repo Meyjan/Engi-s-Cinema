@@ -2,8 +2,19 @@ hr {
     margin-left: 0;
     margin-top: 2.5em;
     margin-bottom: 2.5em;
-    width: 92.5%;
+    width: 97.5%;
     color: #d1d1d1;
+}
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+button > img {
+    width: 1.2em;
+    height: 1.2em;
+    margin-bottom: -3%;
 }
 .search-result {
     background-color: white;
@@ -38,15 +49,10 @@ hr {
     height: 12em;
 }
 .detail-btn {
-    margin-left: 30%;
+    margin-left: 29%;
     margin-bottom: 0;
     max-height: 2em;
-}
-.detail-btn > img {
-    width: 1em;
-    height: 1em;
-    padding-left: 0.25em;
-    bottom: 0;
+    align-items: center;
 }
 .detail-btn > a {
     text-decoration: none;
@@ -56,11 +62,14 @@ hr {
     font-size: 20px;
 }
 #return-count {
-    opacity: 0.5;
+    color: #6b6b6b;
 }
 #return-title {
     font-size: 1.4em;
     margin-bottom: 0.5%;
+}
+#movie-desc {
+    font-weight: normal;
 }
 #movie-rating {
     padding-top: 0;
@@ -71,7 +80,7 @@ hr {
     align-items: center;
 }
 #score-rating {
-    opacity: 0.6;
+    color: #6b6b6b;
 }
 #star {
     width: 1.5em;
