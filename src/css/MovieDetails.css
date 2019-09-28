@@ -48,11 +48,6 @@ button > img {
     display: flex;
     flex-direction: column;
 }
-.movie-poster {
-    width: 16em;
-    height: 22em;
-    border-radius: 3%;
-}
 .movie-content {
     display: flex;
     margin-bottom: 2.5em;
@@ -128,6 +123,11 @@ button > img {
     margin-top: 0;
     margin-bottom: 0;
     color: #6b6b6b;
+}
+#movie-poster {
+    width: 16em;
+    height: 22em;
+    border-radius: 3%;
 }
 #movie-rating {
     display: flex;
