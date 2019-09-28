@@ -42,7 +42,7 @@ function showHistory() {
 
                 let datetimecon = $("<span>");
                 datetimecon.className = "details-details";
-
+                 
                 let datetime = $("<span>");
                 //datetime.className = "details-details";
                 datetime.innerHTML = response[i].date + " " + response[i].time ;
@@ -50,29 +50,32 @@ function showHistory() {
                 let schedule = $("<span>");
                 schedule.className = "blue-text";
                 schedule.innerHTML = "Schedule: ";
-
+                 
                 let buttoncon = $("<form>");
                 buttoncon.className = "details-button";
-                buttoncon.action = "../php/ReviewButtonhandling,php";
-                buttoncon.method = "get"
+                buttoncon.action = "../php/ReviewButtonhandling";
+                buttoncon.method = "get";
 
                 let delbut = $("<button>");
                 delbut.className = "button-delete";
+                delbut.type = "submit";
                 delbut.innerHTML = "Delete Review";
                 delbut.value = -1;
-                delbut.name = "button"
+                delbut.name = "button";
 
                 let edbut = $("<button>");
                 edbut.className = "button-edit";
+                edbut.type = "submit";
                 edbut.innerHTML = "Edit Review";
-                edbut.value = reponse[i].id;
-                edbut.name = "button"
+                edbut.value = reponse[i].title;
+                edbut.name = "button";
 
                 let adbut = $("<button>");
                 adbut.className = "button-add";
+                adbut.type = "submit";
                 adbut.innerHTML = "Add Review";
-                adbut.value = reponse[i].id;
-                adbut.value = "buton"
+                adbut.value = reponse[i].title;
+                adbut.name = "button";
 
                 if (response[i] != null) {
                     buttoncon.appendChild(delbut);
