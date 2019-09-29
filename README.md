@@ -155,17 +155,43 @@ Deadline tugas adalah pada **hari Minggu, 29 September 2019 pukul 15.00 WIB**. W
 
 Setiap anggota kelompok **diwajibkan** untuk mengerjakan bagian frontend dan backend.
 
+## instalasi dan Cara Menjalankan Server
+Untuk aplikasi ini digunakan server apache yang tersedia dari aplikasi XAMPP. langkah-langkah untuk menjalankan server adalah sebagai berikut :
+1. install XAMPP
+2. jalankan apache dan mysql XAMPP
+3. taruh keseluruhan folder tugas-besar-1-2019 dalam /XAMPP/htdocs
+4. buka localhost/tugas-besar-1-2019/src/html/login.html di browser untuk masuk kedalam halaman login dan menjalankan aplikasi
+
 ### Frontend
-1. Login : 13517xxx, 13517xxx
-2. Register : 13517xxx
-3. (Lanjutkan …)
+1. Login : 13517101
+2. Register : 13517101
+3. Homepage :13517101
+4. Search : 13517131
+5. Film Detail : 13517131
+6. Buy Ticket : 13517131
+7. Transaction History : 13515128
+8. User review : 13515128
+
 
 ### Backend
-1. Login : 13517xxx, 13517xxx
-2. Register : 13517xxx
-3. (Lanjutkan…)
+1. Login : 13517101
+2. Register : 13517101
+3. Homepage :13517101
+4. Search : 13517131
+5. Film Detail : 13517131
+6. Buy Ticket : 13517131
+7. Transaction History : 13515128
+8. User review : 13515128
+
+## Penjelasan Pembagian tugas:
+1. 13517101 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
+2. 13517131 bertanggung jawab atas bagian dalam dari aplikasi
+3. 13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi 
+
 
 ## About
+
+
 
 Asisten IF3110 - 2019
 
