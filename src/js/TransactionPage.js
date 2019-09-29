@@ -47,28 +47,33 @@ function showHistory() {
                  
             let buttoncon = document.createElement('form');
             buttoncon.className = "details-buttons";
-            buttoncon.action = "../php/ReviewPage.php";
-            buttoncon.method = "get";
 
             let delbut = document.createElement('button');
             delbut.className = "button-delete";
-            delbut.type = "submit";
             delbut.innerHTML = "Delete Review";
-            delbut.value = "-1";
+            delbut.type = "record";
+            delbut.value = temp[i].id;
             delbut.name = "button";
+            delbut.addEventListener('click', function() {
+                deleteTransaction(delbut.value);
+            });
 
             let edbut = document.createElement('button');
+            edbut.action = "../php/ReviewPage.php";
+            edbut.method = "get";
             edbut.className = "button-edit";
             edbut.type = "submit";
             edbut.innerHTML = "Edit Review";
-            edbut.value = temp[i].id;
+            edbut.value = "edit" + temp[i].id;
             edbut.name = "button";
 
             let adbut = document.createElement('button');
+            adbut.action = "../php/ReviewPage.php";
+            adbut.method = "get";
             adbut.className = "button-add";
             adbut.type = "submit";
             adbut.innerHTML = "Add Review";
-            adbut.value = temp[i].id;
+            adbut.value = "add" + temp[i].id;
             adbut.name = "button";
 
             if (temp[i].review != null) {
@@ -101,6 +106,23 @@ function showHistory() {
             container.appendChild(detail);
 
             great_container.appendChild(container);
+        }
+    }
+}
+
+function deleteTransaction(deleteId) {
+    let request = new XMLHttpRequest();
+    let param = "id=" + deleteId;
+
+    request.open("GET", "../php/ReviewDelete.php?" + param, true);
+    request.send();
+
+    request.onload = () => {
+        let response = request.response;
+        if (response == 200) {
+            location.reload();
+        } else {
+            alert("Failed deleting review");
         }
     }
 }
