@@ -1,4 +1,4 @@
-# Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
+﻿# Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
 
 ## Deskripsi Singkat
 
@@ -40,7 +40,7 @@ Setelah semua nilai *field* sudah diisi dan valid, pengguna dapat mendaftarkan a
 
 ### Home page
 
-![](mockup/Home.jpg)
+![](mockup/result/Home.jpg)
 
 Pada halaman **Home**, pengguna disambut dengan *username* pengguna dan daftar film yang sedang tayang. Film yang sedang tayang adalah film yang mempunyai jadwal saat waktu sekarang. Pengguna dapat melihat detail film dengan mengklik poster atau judul film.
 
@@ -70,7 +70,7 @@ Pembelian tiket bioskop dapat dibeli di halaman ini juga. Pengguna memilih tangg
 
 Setelah memilih jadwal tayang film, pengguna memilih posisi kursi. Untuk setiap pembelian, pengguna hanya dapat **membeli 1 kursi**. Pengguna tidak dapat memilih kursi yang telah dibeli oleh pengguna lain. Kursi yang tersedia berwarna biru dan yang tidak tersedia berwarna abu-abu. (Asumsi saat pembelian tiket, ketersediaan kursi tidak berubah).
 
-![](mockup/BookTicket-Selectedticket.jpg)
+![](mockup/result/BookTicket-Selectedticket.jpg)
 
 “Booking Summary” akan muncul ketika pengguna sudah memilih posisi kursi. Pengguna dapat membeli tiket dengan menekan tombol “Buy Ticket”.
 
@@ -80,7 +80,8 @@ Sebuah modal akan muncul untuk memberitahukan apakah tiketnya berhasil dibeli at
 
 ### Transaction History page
 
-![](mockup/Transactions.jpg)
+![](mockup/result/Transaction.jpg)
+![](mockup/result/Transaction2.jpg)
 
 Pada halaman ini, ditampilkan daftar film yang telah dipesan dan telah ditonton (jadwal tayang telah lewat) maupun yang belum (jadwal tayang di masa depan). Daftar diurutkan **berdasarkan waktu jadwal tayang** dengan jadwal tayang paling terakhir merupakan entri paling atas.
 
@@ -95,7 +96,8 @@ Pada setiap entri pada *history*:
 
 ### User Review page
 
-![](mockup/Reviews-Add.jpg)
+![](mockup/result/Review-Add.jpg)
+![](mockup/result/Review-Add2.jpg)
 
 Pengguna menulis ulasan film pada halaman ini. Pengguna dapat memberikan ulasan dalam bentuk pilihan rating dalam skala 1-10 dan deskripsi ulasan.
 
