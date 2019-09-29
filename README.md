@@ -182,12 +182,16 @@ Untuk aplikasi ini digunakan server apache yang tersedia dari aplikasi XAMPP. la
 6. Buy Ticket : 13517131
 7. Transaction History : 13515128
 8. User review : 13515128
-## About
 
-##Penjelasan Pembagian tugas:
+## Penjelasan Pembagian tugas:
 13517101 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
 13517131 bertanggung jawab atas bagian dalam dari aplikasi
-13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi
+13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi 
+
+
+## About
+
+
 
 Asisten IF3110 - 2019
 
