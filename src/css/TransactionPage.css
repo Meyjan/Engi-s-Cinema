@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 body{
     font-weight: bold;
-    font-family: "Arial", sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 15px;
     margin: 0px;
     height: 0px;
@@ -185,4 +187,6 @@ nav input {
     
 }
 
-
+#engima {
+    padding-top: 0;
+}
