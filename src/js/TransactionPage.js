@@ -59,21 +59,21 @@ function showHistory() {
             });
 
             let edbut = document.createElement('button');
-            edbut.action = "../php/ReviewPage.php";
-            edbut.method = "get";
+            edbut.formAction = "../html/ReviewPage.html";
+            edbut.formMethod = "get";
             edbut.className = "button-edit";
             edbut.type = "submit";
             edbut.innerHTML = "Edit Review";
-            edbut.value = "edit" + temp[i].id;
+            edbut.value = "edit;" + temp[i].id;
             edbut.name = "button";
 
             let adbut = document.createElement('button');
-            adbut.action = "../php/ReviewPage.php";
-            adbut.method = "get";
+            adbut.formAction = "../html/ReviewPage.html";
+            adbut.formMethod = "get";
             adbut.className = "button-add";
             adbut.type = "submit";
             adbut.innerHTML = "Add Review";
-            adbut.value = "add" + temp[i].id;
+            adbut.value = "add;" + temp[i].id;
             adbut.name = "button";
 
             if (temp[i].review != null) {
