@@ -80,8 +80,8 @@ Sebuah modal akan muncul untuk memberitahukan apakah tiketnya berhasil dibeli at
 
 ### Transaction History page
 
-![](mockup/result/Transactions.jpg)
-![](mockup/result/Transactions2.jpg)
+![](mockup/result/Transaction.jpg)
+![](mockup/result/Transaction2.jpg)
 
 Pada halaman ini, ditampilkan daftar film yang telah dipesan dan telah ditonton (jadwal tayang telah lewat) maupun yang belum (jadwal tayang di masa depan). Daftar diurutkan **berdasarkan waktu jadwal tayang** dengan jadwal tayang paling terakhir merupakan entri paling atas.
 
