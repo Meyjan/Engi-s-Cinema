@@ -54,46 +54,46 @@
             </div>
             <div class = "second-container">
                 <div class = "seat-container">
-                    <button class = "seat">1</button>
-                    <button class = "seat">2</button>
-                    <button class = "seat">3</button>
-                    <button class = "seat">4</button>
-                    <button class = "seat">5</button>
-                    <button class = "seat">6</button>
-                    <button class = "seat">7</button>
-                    <button class = "seat">8</button>
-                    <button class = "seat">9</button>
-                    <button class = "seat">10</button>
-                    <button class = "seat">11</button>
-                    <button class = "seat">12</button>
-                    <button class = "seat">13</button>
-                    <button class = "seat">14</button>
-                    <button class = "seat">15</button>
-                    <button class = "seat">16</button>
-                    <button class = "seat">17</button>
-                    <button class = "seat">18</button>
-                    <button class = "seat">19</button>
-                    <button class = "seat">20</button>
-                    <button class = "seat">21</button>
-                    <button class = "seat">22</button>
-                    <button class = "seat">23</button>
-                    <button class = "seat">24</button>
-                    <button class = "seat">25</button>
-                    <button class = "seat">26</button>
-                    <button class = "seat">27</button>
-                    <button class = "seat">28</button>
-                    <button class = "seat">29</button>
-                    <button class = "seat">30</button>
+                    <button class = "seat" id = "button1" onclick = "changeDisplay(this)">1</button>
+                    <button class = "seat" id = "button2" onclick = "changeDisplay(this)">2</button>
+                    <button class = "seat" id = "button3" onclick = "changeDisplay(this)">3</button>
+                    <button class = "seat" id = "button4" onclick = "changeDisplay(this)">4</button>
+                    <button class = "seat" id = "button5" onclick = "changeDisplay(this)">5</button>
+                    <button class = "seat" id = "button6" onclick = "changeDisplay(this)">6</button>
+                    <button class = "seat" id = "button7" onclick = "changeDisplay(this)">7</button>
+                    <button class = "seat" id = "button8" onclick = "changeDisplay(this)">8</button>
+                    <button class = "seat" id = "button9" onclick = "changeDisplay(this)">9</button>
+                    <button class = "seat" id = "button10" onclick = "changeDisplay(this)">10</button>
+                    <button class = "seat" id = "button11" onclick = "changeDisplay(this)">11</button>
+                    <button class = "seat" id = "button12" onclick = "changeDisplay(this)">12</button>
+                    <button class = "seat" id = "button13" onclick = "changeDisplay(this)">13</button>
+                    <button class = "seat" id = "button14" onclick = "changeDisplay(this)">14</button>
+                    <button class = "seat" id = "button15" onclick = "changeDisplay(this)">15</button>
+                    <button class = "seat" id = "button16" onclick = "changeDisplay(this)">16</button>
+                    <button class = "seat" id = "button17" onclick = "changeDisplay(this)">17</button>
+                    <button class = "seat" id = "button18" onclick = "changeDisplay(this)">18</button>
+                    <button class = "seat" id = "button19" onclick = "changeDisplay(this)">19</button>
+                    <button class = "seat" id = "button20" onclick = "changeDisplay(this)">20</button>
+                    <button class = "seat" id = "button21" onclick = "changeDisplay(this)">21</button>
+                    <button class = "seat" id = "button22" onclick = "changeDisplay(this)">22</button>
+                    <button class = "seat" id = "button23" onclick = "changeDisplay(this)">23</button>
+                    <button class = "seat" id = "button24" onclick = "changeDisplay(this)">24</button>
+                    <button class = "seat" id = "button25" onclick = "changeDisplay(this)">25</button>
+                    <button class = "seat" id = "button26" onclick = "changeDisplay(this)">26</button>
+                    <button class = "seat" id = "button27" onclick = "changeDisplay(this)">27</button>
+                    <button class = "seat" id = "button28" onclick = "changeDisplay(this)">28</button>
+                    <button class = "seat" id = "button29" onclick = "changeDisplay(this)">29</button>
+                    <button class = "seat" id = "button30" onclick = "changeDisplay(this)">30</button>
                     <div class = "screen-seat">Screen</div>
                 </div>
                 <div class = "book-container">
                     <div class = "book-title">
                         Booking Summary
                     </div>
-                    <div class = "empty-summary" hidden = True>
+                    <div class = "empty-summary" id = "empty-summary" hidden = True>
                         You haven't selected any seat yet. Please click on one of the seat provided
                     </div>
-                    <div class = "filled-summary">
+                    <div class = "filled-summary" id = "filled-summary">
                         <div class = "movie-title">
                             Avengers: Endgame
                         </div>
@@ -104,11 +104,11 @@
                             <div class = "movie-seat">
                                 Seat #18
                             </div>
-                            <div class = "movie-price">
+                            <div class = "movie-price" id = "price-tag">
                                 Rp 45.000
                             </div>
                         </div>
-                        <button class = "buy-ticket" id = "buy-ticket" onclick = "openModal()">
+                        <button class = "buy-ticket" id = "buy-ticket" onclick = "submitSeat()">
                             Buy Ticket
                         </button>
                     </div>
