@@ -157,7 +157,19 @@ Deadline tugas adalah pada **hari Minggu, 29 September 2019 pukul 15.00 WIB**. W
 
 Setiap anggota kelompok **diwajibkan** untuk mengerjakan bagian frontend dan backend.
 
-## instalasi dan Cara Menjalankan Server
+## Deskripsi Aplikasi Web
+
+**Engima** adalah aplikasi berbasis *web* yang dibuat menggunakan **HTML, CSS, JavaScript, & PHP**. **Engima** memiliki fitur *login*, *register*, pencarian film, pemesanan tiket dan juga penulisan *review*.
+
+## Daftar Requirement
+
+1. XAMPP
+2. MySQL
+3. PHPcs
+4. JSlint
+5. Bahasa pemrograman: JavaScript dan PHP
+
+## Instalasi dan Cara Menjalankan Server
 Untuk aplikasi ini digunakan server apache yang tersedia dari aplikasi XAMPP. langkah-langkah untuk menjalankan server adalah sebagai berikut :
 1. install XAMPP
 2. jalankan apache dan mysql XAMPP
@@ -165,29 +177,29 @@ Untuk aplikasi ini digunakan server apache yang tersedia dari aplikasi XAMPP. la
 4. buka localhost/tugas-besar-1-2019/src/html/login.html di browser untuk masuk kedalam halaman login dan menjalankan aplikasi
 
 ### Frontend
-1. Login : 13517101
-2. Register : 13517101
-3. Homepage :13517101
-4. Search : 13517131
-5. Film Detail : 13517131
-6. Buy Ticket : 13517131
-7. Transaction History : 13515128
-8. User review : 13515128
+1. Login : 13517131
+2. Register : 13517131
+3. Homepage :13517131
+4. Search : 13517101, 13517131
+5. Film Detail : 13517101
+6. Buy Ticket : 13517101, 13517131
+7. Transaction History : 13515128, 13517131
+8. User review : 13515128, 13517131
 
 
 ### Backend
-1. Login : 13517101
-2. Register : 13517101
-3. Homepage :13517101
-4. Search : 13517131
-5. Film Detail : 13517131
-6. Buy Ticket : 13517131
+1. Login : 13517131
+2. Register : 13517131
+3. Homepage :13517131
+4. Search : 13517101
+5. Film Detail : 13517101
+6. Buy Ticket : 13517101, 13517131
 7. Transaction History : 13515128
-8. User review : 13515128
+8. User review : 13515128, 13517131
 
 ## Penjelasan Pembagian tugas:
-1. 13517101 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
-2. 13517131 bertanggung jawab atas bagian dalam dari aplikasi
+1. 13517131 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
+2. 13517101 bertanggung jawab atas bagian dalam dari aplikasi
 3. 13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi 
 
 
