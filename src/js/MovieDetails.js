@@ -5,7 +5,6 @@ window.onload = function() {
 }
 
 function loadMovie(e) {
-    alert("Test called");
     let idValue = new URL(window.location.href);
     idValue = idValue.searchParams.get("id");
 

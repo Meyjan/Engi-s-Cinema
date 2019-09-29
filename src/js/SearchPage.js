@@ -243,7 +243,6 @@ function pageSwap(e) {
 }
 
 function logout() {
-    alert(result.length);
     let request = new XMLHttpRequest();
     request.open("GET", "../php/Logout.php");
     request.send();
@@ -258,8 +257,4 @@ function logout() {
             window.location.replace('../html/LoginPage.html');
         }
     }
-}
-
-function gotoPage(id) {
-    alert("Clicked");
 }

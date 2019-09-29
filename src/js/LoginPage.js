@@ -10,7 +10,6 @@ function cookieLogin() {
     request.onload = () => {
         let response = parseInt(request.response);
         if (response == 200) {
-            alert("Cookie login accepted");
             window.location.replace('../html/HomePage.html');
         }
     }
@@ -28,7 +27,6 @@ function formCheck(e) {
     request.onload = () => {
         let response = request.response;
         response = parseInt(response)
-        alert(response);
         if (response == 200) {
             window.location.replace('../html/HomePage.html');
         }

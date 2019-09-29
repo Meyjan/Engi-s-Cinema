@@ -16,12 +16,8 @@ function beginSearch(e) {
 
         let response = request.response;
         let titleElement = document.getElementById("return-text");
-        alert("Test");
-        alert(titleElement.innerHTML);
-        document.getElementById("return-text").innerHTML = "asdfasodifn";
 
-        alert("Test 2");
-        alert("Test 2");
+        document.getElementById("return-text").innerHTML = "asdfasodifn";
     }
 }
 
@@ -39,7 +35,6 @@ function showResult() {
             alert ("No movie");
         }
         else {
-            alert("Resource get");
             response = response.split(";;");
 
             container = document.getElementById("return-list");

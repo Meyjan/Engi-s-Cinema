@@ -126,3 +126,20 @@ function deleteTransaction(deleteId) {
         }
     }
 }
+
+function logout() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "../php/Logout.php");
+    request.send();
+
+    request.onload = () => {
+        let response = parseInt(request.response);
+
+        if (response != 200) {
+            alert("Server is not right at the moment");
+        }
+        else {
+            window.location.replace('../html/LoginPage.html');
+        }
+    }
+}

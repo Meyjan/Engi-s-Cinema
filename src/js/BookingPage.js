@@ -4,7 +4,6 @@ var seat_num = -1;
 var scheduleId;
 
 window.onload = function() {
-    this.alert("Called");
     instantiateTable();
 };
 
@@ -25,7 +24,6 @@ window.onclick = function(event) {
 }
 
 function instantiateTable() {
-    alert("Called");
     let url = new URL(window.location.href);
     window.scheduleId = url.searchParams.get("id");
 
@@ -103,4 +101,21 @@ function submitSeat() {
             openModal();
         }
     };
+}
+
+function logout() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "../php/Logout.php");
+    request.send();
+
+    request.onload = () => {
+        let response = parseInt(request.response);
+
+        if (response != 200) {
+            alert("Server is not right at the moment");
+        }
+        else {
+            window.location.replace('../html/LoginPage.html');
+        }
+    }
 }
