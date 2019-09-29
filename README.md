@@ -1,4 +1,4 @@
-# Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
+﻿# Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
 
 ## Deskripsi Singkat
 
@@ -16,7 +16,7 @@ Engi telah mempekerjakan seorang UI/UX profesional untuk mendesain tampilan *web
 
 ### Login page
 
-![](mockup/Login.jpg)
+![](mockup/result/Login.png)
 
 Halaman pertama yang ditampilkan jika pengguna belum *login* atau sudah *logout* adalah halaman **Login**. Pengguna dapat melakukan *login* sebagai *user*. *Login* hanya membandingkan email dan password saja. Tidak perlu tambahan proteksi apapun.
 
@@ -24,7 +24,7 @@ Identitas pengguna yang sudah *login* akan disimpan sebagai ***cookie*** dalam b
 
 ### Register page
 
-![](mockup/Register.jpg)
+![](mockup/result/Register.png)
 
 Pengguna dapat mendaftarkan akun baru jika belum *login* atau sudah *logout*. Pada halaman ini, pengguna mendaftarkan diri dengan email, username, dan nomor hp yang **unik**. Pengecekan keunikan nilai *field* dilakukan menggunakan AJAX. Jika unik, border *field* akan berwarna hijau. Jika tidak unik, *field* akan diberikan pesan error seperti berikut.
 
@@ -40,7 +40,7 @@ Setelah semua nilai *field* sudah diisi dan valid, pengguna dapat mendaftarkan a
 
 ### Home page
 
-![](mockup/Home.jpg)
+![](mockup/result/Home.jpg)
 
 Pada halaman **Home**, pengguna disambut dengan *username* pengguna dan daftar film yang sedang tayang. Film yang sedang tayang adalah film yang mempunyai jadwal saat waktu sekarang. Pengguna dapat melihat detail film dengan mengklik poster atau judul film.
 
@@ -48,7 +48,7 @@ Header aplikasi web terdiri dari *search bar* dan pilihan untuk *logout*. Search
 
 ### Search Result page
 
-![](mockup/Search.jpg)
+![](mockup/result/Search.png)
 
 Hasil pencarian dari *search bar* di halaman Home akan ditampilkan pada halaman ini. Untuk setiap film, ditampilkan informasi judul, sinopsis, rating, poster. Pengguna dapat melihat detail film dengan mengklik tombol “View details”.
 
@@ -56,7 +56,7 @@ Jika daftar film melebihi jumlah tertentu (jumlah didefinisikan sendiri), maka a
 
 ### Film Detail page
 
-![](mockup/MovieDetail.jpg)
+![](mockup/result/MovieDetail.png)
 
 Pada halaman **Film Detail**, terdapat beberapa informasi mengenai film yang dipilih, yaitu judul, poster, rating, genre (bisa lebih dari satu), tanggal rilis, durasi tayang (dalam menit), dan sinopsis dari film tersebut.
 
@@ -70,7 +70,7 @@ Pembelian tiket bioskop dapat dibeli di halaman ini juga. Pengguna memilih tangg
 
 Setelah memilih jadwal tayang film, pengguna memilih posisi kursi. Untuk setiap pembelian, pengguna hanya dapat **membeli 1 kursi**. Pengguna tidak dapat memilih kursi yang telah dibeli oleh pengguna lain. Kursi yang tersedia berwarna biru dan yang tidak tersedia berwarna abu-abu. (Asumsi saat pembelian tiket, ketersediaan kursi tidak berubah).
 
-![](mockup/BookTicket-Selectedticket.jpg)
+![](mockup/result/BookTicket-Selectedticket.jpg)
 
 “Booking Summary” akan muncul ketika pengguna sudah memilih posisi kursi. Pengguna dapat membeli tiket dengan menekan tombol “Buy Ticket”.
 
@@ -80,7 +80,8 @@ Sebuah modal akan muncul untuk memberitahukan apakah tiketnya berhasil dibeli at
 
 ### Transaction History page
 
-![](mockup/Transactions.jpg)
+![](mockup/result/Transaction.jpg)
+![](mockup/result/Transaction2.jpg)
 
 Pada halaman ini, ditampilkan daftar film yang telah dipesan dan telah ditonton (jadwal tayang telah lewat) maupun yang belum (jadwal tayang di masa depan). Daftar diurutkan **berdasarkan waktu jadwal tayang** dengan jadwal tayang paling terakhir merupakan entri paling atas.
 
@@ -95,7 +96,8 @@ Pada setiap entri pada *history*:
 
 ### User Review page
 
-![](mockup/Reviews-Add.jpg)
+![](mockup/result/Review-Add.jpg)
+![](mockup/result/Review-Add2.jpg)
 
 Pengguna menulis ulasan film pada halaman ini. Pengguna dapat memberikan ulasan dalam bentuk pilihan rating dalam skala 1-10 dan deskripsi ulasan.
 
@@ -155,17 +157,55 @@ Deadline tugas adalah pada **hari Minggu, 29 September 2019 pukul 15.00 WIB**. W
 
 Setiap anggota kelompok **diwajibkan** untuk mengerjakan bagian frontend dan backend.
 
+## Deskripsi Aplikasi Web
+
+**Engima** adalah aplikasi berbasis *web* yang dibuat menggunakan **HTML, CSS, JavaScript, & PHP**. **Engima** memiliki fitur *login*, *register*, pencarian film, pemesanan tiket dan juga penulisan *review*.
+
+## Daftar Requirement
+
+1. XAMPP
+2. MySQL
+3. PHPcs
+4. JSlint
+5. Bahasa pemrograman: JavaScript dan PHP
+
+## Instalasi dan Cara Menjalankan Server
+Untuk aplikasi ini digunakan server apache yang tersedia dari aplikasi XAMPP. langkah-langkah untuk menjalankan server adalah sebagai berikut :
+1. install XAMPP
+2. jalankan apache dan mysql XAMPP
+3. taruh keseluruhan folder tugas-besar-1-2019 dalam /XAMPP/htdocs
+4. buka localhost/tugas-besar-1-2019/src/html/login.html di browser untuk masuk kedalam halaman login dan menjalankan aplikasi
+
 ### Frontend
-1. Login : 13517xxx, 13517xxx
-2. Register : 13517xxx
-3. (Lanjutkan …)
+1. Login : 13517131
+2. Register : 13517131
+3. Homepage :13517131
+4. Search : 13517101, 13517131
+5. Film Detail : 13517101
+6. Buy Ticket : 13517101, 13517131
+7. Transaction History : 13515128, 13517131
+8. User review : 13515128, 13517131
+
 
 ### Backend
-1. Login : 13517xxx, 13517xxx
-2. Register : 13517xxx
-3. (Lanjutkan…)
+1. Login : 13517131
+2. Register : 13517131
+3. Homepage :13517131
+4. Search : 13517101
+5. Film Detail : 13517101
+6. Buy Ticket : 13517101, 13517131
+7. Transaction History : 13515128
+8. User review : 13515128, 13517131
+
+## Penjelasan Pembagian tugas:
+1. 13517131 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
+2. 13517101 bertanggung jawab atas bagian dalam dari aplikasi
+3. 13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi 
+
 
 ## About
+
+
 
 Asisten IF3110 - 2019
 
