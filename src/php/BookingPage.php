@@ -49,10 +49,18 @@ if (!empty($response)) {
 echo(json_encode($all_seat));
 echo(";");
 
-$sql = "SELECT harga FROM movie_schedule_table WHERE schedule_id = " . $schedule_result;
+$sql = "SELECT harga, date, time FROM movie_schedule_table WHERE schedule_id = " . $schedule_result;
 $response = mysqli_query($conn, $sql);
 $response = mysqli_fetch_assoc($response);
 
 echo($response["harga"]);
+echo(";");
+echo($response["date"] . " " . $response["time"]);
+echo(";");
+
+$sql = "SELECT title FROM movie_table WHERE id = (SELECT movie_id FROM movie_schedule_table WHERE schedule_id = " . $schedule_result . ")";
+$response = mysqli_query($conn, $sql);
+$response = mysqli_fetch_assoc($response);
+echo($response["title"]);
 
 ?>
