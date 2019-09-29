@@ -5,11 +5,11 @@ var total_page;
 window.onload = function() {
     curr_page = 1;
     this.beginSearch(event);
-}
+};
 
 
 function beginSearch(e) {
-    let searchValue = new URL(window.location.href)
+    let searchValue = new URL(window.location.href);
     searchValue = searchValue.searchParams.get("searchVal");
 
     let request = new XMLHttpRequest();

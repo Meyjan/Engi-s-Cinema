@@ -1,7 +1,7 @@
 window.onload = function() {
     this.identifyUser();
     this.showMovies();
-}
+};
 
 function identifyUser() {
     let request = new XMLHttpRequest();
@@ -18,7 +18,7 @@ function identifyUser() {
         else {
             document.getElementById("BlueEngiNotSoBold").innerHTML = response;
         }
-    }
+    };
 }
 
 function logout() {
@@ -35,7 +35,7 @@ function logout() {
         else {
             window.location.replace('../html/LoginPage.html');
         }
-    }
+    };
 }
 
 function showMovies() {

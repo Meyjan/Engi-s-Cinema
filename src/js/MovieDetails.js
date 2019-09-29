@@ -2,7 +2,7 @@ window.onload = function() {
     this.loadMovie(event);
     this.loadSchedule(event);
     this.loadReview(event);
-}
+};
 
 function loadMovie(e) {
     let idValue = new URL(window.location.href);
@@ -27,7 +27,7 @@ function loadMovie(e) {
         document.getElementById("runtime").innerHTML = obj.length;
         document.getElementById("release-date").innerHTML = obj.release_date;
         document.getElementById("desc-content").innerHTML = obj.summary;
-    }
+    };
 }
 
 function loadSchedule(e) {

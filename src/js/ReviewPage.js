@@ -41,7 +41,7 @@ function generateInitReview() {
     request.onload = () => {
         let response = request.response;
         document.getElementById("title_test").innerHTML = response;
-    }
+    };
 }
 
 function submitReview(e) {
@@ -80,5 +80,5 @@ function logout() {
         else {
             window.location.replace('../html/LoginPage.html');
         }
-    }
+    };
 }

@@ -12,7 +12,7 @@ function cookieLogin() {
         if (response == 200) {
             window.location.replace('../html/HomePage.html');
         }
-    }
+    };
 } 
 
 function formCheck(e) {
@@ -26,11 +26,10 @@ function formCheck(e) {
 
     request.onload = () => {
         let response = request.response;
-        response = parseInt(response)
+        response = parseInt(response);
         if (response == 200) {
             window.location.replace('../html/HomePage.html');
-        }
-        else {
+        } else {
             document.getElementById('login-error').innerHTML = "Login failed. Username and password doesn't match with the data in database";
         }
     };

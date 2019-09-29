@@ -1,6 +1,6 @@
 window.onload = function() {
     this.alert("Load");
-}
+};
 
 function beginSearch(e) {
     let searchValue = document.getElementById("SearchInputTextBox").value;
@@ -18,7 +18,7 @@ function beginSearch(e) {
         let titleElement = document.getElementById("return-text");
 
         document.getElementById("return-text").innerHTML = "asdfasodifn";
-    }
+    };
 }
 
 document.getElementById("SearchInput").addEventListener("submit", beginSearch);
