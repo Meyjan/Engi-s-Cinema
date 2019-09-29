@@ -14,7 +14,8 @@ if (isset($_GET["id"])) {
 
 
 $conn = openConnection();
-$sql = "SELECT movie_table.title FROM movie_table join movie_schedule_table on (movie_table.id = movie_schedule_table.movie_id) 
+$sql = "SELECT movie_table.title FROM movie_table join 
+movie_schedule_table on (movie_table.id = movie_schedule_table.movie_id) 
 WHERE movie_schedule_table.schedule_id = " . $scheduleId;
 $response =  mysqli_query($conn, $sql);
 

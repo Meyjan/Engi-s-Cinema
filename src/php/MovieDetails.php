@@ -1,26 +1,24 @@
 <?php
 
-    /**Related files */
-    require "SqlConnection.php";
-    require "SqlUtility.php";
+require "SqlConnection.php";
+require "SqlUtility.php";
 
-    $idValue = null;
+$idValue = null;
 
 
-    /**Request for movie details */
-    if (isset($_GET["id"])) {
-        $idValue = $_GET["id"];
+if (isset($_GET["id"])) {
+    $idValue = $_GET["id"];
 
-        $conn = openConnection();
-        $sql = "SELECT title, photo_link, summary, genre, length, release_date
-                FROM movie_table
-                WHERE id =" . $idValue;
-        $response = mysqli_query($conn, $sql);
-        $response = mysqli_fetch_assoc($response);
+    $conn = openConnection();
+    $sql = "SELECT title, photo_link, summary, genre, length, release_date
+            FROM movie_table
+            WHERE id =" . $idValue;
+    $response = mysqli_query($conn, $sql);
+    $response = mysqli_fetch_assoc($response);
 
-        if (!empty($response)) {
-            echo (json_encode($response));
-        }
+    if (!empty($response)) {
+        echo (json_encode($response));
     }
+}
 
 ?>

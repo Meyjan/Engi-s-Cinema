@@ -1,8 +1,8 @@
 <?php
 
 // Related files
-include "SqlConnection.php";
-include "SqlUtility.php";
+require "SqlConnection.php";
+require "SqlUtility.php";
 
 // Check browser's cookie
 $cookie = "-999";
