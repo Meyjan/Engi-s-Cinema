@@ -161,7 +161,7 @@ nav input {
 }
 
 .second-container .review-area .review-textbox {
-    overflow: auto;
+    resize: vertical;
     width: 52%;
     height: 130px;
     border: 1px solid gray;

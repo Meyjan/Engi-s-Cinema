@@ -1,7 +1,18 @@
 <?php
 
+// Related files
 require "SqlConnection.php";
 require "SqlUtility.php";
+
+$scheduleId = -1;
+
+// Get schedule ID
+if (isset($_GET["id"])) {
+    $scheduleId = $_GET["id"];
+} else {
+    echo -500;
+    return;
+}
 
 // Check browser's cookie
 $cookie = "-999";
@@ -17,15 +28,9 @@ $conn = openConnection();
 $sql = "SELECT id FROM user_table WHERE token = \"" . $cookie . "\"";
 $user_result = executeSql($conn, $sql)[0];
 
-$rating = filter_input(INPUT_POST, "rating", FILTER_SANITIZE_NUMBER_INT);
-$review = filter_input(INPUT_POST, "review", FILTER_SANITIZE_STRING);
-$reviewAct = filter_input(INPUT_POST, "reAction", FILTER_SANITIZE_STRING);
-$scheduleId = filter_input(INPUT_POST, "scheduleId", FILTER_SANITIZE_NUMBER_INT);
-
-$sql = "UPDATE movie_user_table SET rating = " . $rating . ",
- review = \"" . $review . "\" WHERE user_id = " . $user_result . " 
- AND schedule_id = " . $scheduleId;
-
+// Delete review
+$sql = "UPDATE movie_user_table SET rating = NULL, review = NULL WHERE schedule_id = " . $scheduleId . " AND user_id = " . $user_result;
+echo($sql);
 
 if ($conn -> query($sql) !== true) {
     echo 500;
@@ -33,4 +38,5 @@ if ($conn -> query($sql) !== true) {
 } else {
     echo 200;
 }
+
 ?>
