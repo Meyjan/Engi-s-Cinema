@@ -6,8 +6,11 @@ require "SqlUtility.php";
 
 // Get movie for today's date
 $conn = openConnection();
-$sql = "SELECT id, title, photo_link FROM movie_table join movie_schedule_table on (movie_table.id = movie_schedule_table.movie_id) WHERE DATE(date) = CURRENT_DATE()";
+$sql = "SELECT id, title, photo_link FROM movie_table join 
+movie_schedule_table on (movie_table.id = movie_schedule_table.movie_id) 
+WHERE DATE(date) = CURRENT_DATE()";
 $response =  mysqli_query($conn, $sql);
+
 
 
 if (empty($response)) {
@@ -20,7 +23,8 @@ if (empty($response)) {
         $movie_photo = $value[2];
 
         // Count movie rating
-        $sql2 = "SELECT AVG(rating) FROM movie_user_table WHERE movie_id = " . $movie_id;
+        $sql2 = "SELECT AVG(rating) FROM movie_user_table WHERE 
+        movie_id = " . $movie_id;
         $rating =  mysqli_query($conn, $sql2);
         $movie_rating = mysqli_fetch_all($rating)[0][0];
 

@@ -1,12 +1,10 @@
 <?php
 
-/**Related files */
 require "SqlConnection.php";
 require "SqlUtility.php";
 
 $idValue = null;
 
-/**Request for movie review */
 if (isset($_GET["id"])) {
     $idValue = $_GET["id"];
 

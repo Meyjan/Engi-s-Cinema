@@ -16,7 +16,7 @@ function openConnection() {
     return $conn;
 }
 
-function closeConnection($conn){
+function closeConnection($conn) {
     $conn -> close();
 }
 

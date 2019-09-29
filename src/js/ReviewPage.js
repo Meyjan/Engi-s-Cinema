@@ -33,6 +33,16 @@ function generateInitReview() {
     idValue = idValue.split(";");
     window.scheduleId = idValue[1];
     window.reviewAct = idValue[0];
+
+    let request = new XMLHttpRequest();
+    let param = "id="+idValue[1];
+    request.open("GET", "../php/ReviewTitle.php?" + param, true);
+    request.send();
+
+    request.onload = () => {
+        let response = request.response;
+        document.getElementById("title_test").innerHTML = response;
+    }
 }
 
 function submitReview(e) {

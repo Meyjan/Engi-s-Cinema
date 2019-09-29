@@ -9,8 +9,11 @@ if (isset($_GET["search"])) {
     $searchValue = "%" . $_GET["search"] . "%";
 
     $conn = openConnection();
-    $sql = "SELECT id, title, photo_link, summary, (SELECT ROUND(AVG(rating), 2) FROM movie_user_table WHERE movie_user_table.movie_id = movie_table.id) as rating
-     FROM movie_table WHERE (title LIKE \"" . $searchValue . "\")";
+
+    $sql = "SELECT id, title, photo_link, summary, (SELECT ROUND(AVG(rating), 2) 
+    FROM movie_user_table WHERE movie_user_table.movie_id = movie_table.id) 
+    as rating FROM movie_table WHERE (title LIKE \"" . $searchValue . "\")";
+     
     $response =  mysqli_query($conn, $sql);
 
     if (!empty($response)) {

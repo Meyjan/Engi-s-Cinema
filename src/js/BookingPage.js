@@ -54,6 +54,9 @@ function instantiateTable() {
 
         document.getElementById("price-tag").innerHTML = "Rp " + arr_response[2] + ",-";
 
+        document.getElementById("title-test").innerHTML = arr_response[4];
+        document.getElementById("date-test").innerHTML = arr_response[3];
+
         checkSeatNum();
     }
 }

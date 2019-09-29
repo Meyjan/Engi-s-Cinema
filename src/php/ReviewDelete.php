@@ -29,7 +29,9 @@ $sql = "SELECT id FROM user_table WHERE token = \"" . $cookie . "\"";
 $user_result = executeSql($conn, $sql)[0];
 
 // Delete review
-$sql = "UPDATE movie_user_table SET rating = NULL, review = NULL WHERE schedule_id = " . $scheduleId . " AND user_id = " . $user_result;
+$sql = "UPDATE movie_user_table SET rating = NULL, review = NULL WHERE 
+schedule_id = " . $scheduleId . " AND user_id = " . $user_result;
+
 echo($sql);
 
 if ($conn -> query($sql) !== true) {

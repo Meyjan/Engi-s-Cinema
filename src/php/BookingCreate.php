@@ -25,14 +25,17 @@ $sql = "SELECT id FROM user_table WHERE token = \"" . $cookie . "\"";
 $user_result = executeSql($conn, $sql)[0];
 
 // Get movie id
-$sql = "SELECT movie_id FROM movie_schedule_table WHERE schedule_id = " . $scheduleId;
+$sql = "SELECT movie_id FROM movie_schedule_table WHERE schedule_id = "
+ . $scheduleId;
 $movie_result = executeSql($conn, $sql)[0];
 
 // Added data sql
 if (!$exist) {
-    $sql = "INSERT INTO movie_user_table VALUES (" . $user_result . ", " . $movie_result . ", " . $scheduleId . ", NULL, NULL, " . $seat . ")";
+    $sql = "INSERT INTO movie_user_table VALUES (" . $user_result . ", "
+     . $movie_result . ", " . $scheduleId . ", NULL, NULL, " . $seat . ")";
 } else {
-    $sql = "UPDATE movie_user_table SET seat_number = " . $seat . " WHERE schedule_id = " . $scheduleId . " AND user_id = " . $user_result;
+    $sql = "UPDATE movie_user_table SET seat_number = " . $seat . 
+    " WHERE schedule_id = " . $scheduleId . " AND user_id = " . $user_result;
 }
 
 echo($sql);

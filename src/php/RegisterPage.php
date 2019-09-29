@@ -25,6 +25,7 @@ $conn = openConnection();
 if (!preg_match("/^[A-Za-z0-9_]*$/", $username)) {
     array_push($errorList, ["username", "Username not valid. Can only contains letters, numbers, and underscores"]);
 }
+
 $sql = "SELECT * FROM user_table WHERE username=\"" . $username . "\"";
 if (checkDataExists($conn, $sql)) {
     array_push($errorList, ["username", "Username already exists in the database. Insert a new one"]);
@@ -79,8 +80,10 @@ if (empty($errorList)) {
     // Password hashing
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO user_table (username, email, phone_number, password, profile_pic) VALUES (\"" . 
-    $username . "\", \"" . $email . "\", \"" . $phone . "\", \"" . $password_hash . "\", \"" . $photo . "\")";
+    $sql = "INSERT INTO user_table (username, email, phone_number, 
+    password, profile_pic) VALUES (\"" . 
+    $username . "\", \"" . $email . "\", \"" . $phone . 
+    "\", \"" . $password_hash . "\", \"" . $photo . "\")";
             
     if ($conn -> query($sql) !== true) {
         array_push($errorList, ["username", "Failure in database connection"]);
@@ -95,7 +98,8 @@ if (empty($errorList)) {
     setcookie($cookie_name, $cookie_value, time() + 3600, '/');
 
     if (isset($_COOKIE["login_cookie"])) {
-        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . "\"WHERE email=\"" . $email . "\"";
+        $sql = "UPDATE user_table SET token=\"" . $_COOKIE["login_cookie"] . 
+        "\"WHERE email=\"" . $email . "\"";
         if ($conn -> query($sql) !== true) {
             array_push($errorList, ["photo", "Failure in saving cookie in database"]);
         }
@@ -107,7 +111,7 @@ if (empty($errorList)) {
 
 closeConnection($conn);
 
-foreach($errorList as $error) {
+foreach ($errorList as $error) {
     echo $error[0] . ";" . $error[1] . ";;";
 }
 
