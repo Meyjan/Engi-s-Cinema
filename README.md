@@ -16,7 +16,7 @@ Engi telah mempekerjakan seorang UI/UX profesional untuk mendesain tampilan *web
 
 ### Login page
 
-![](mockup/Result/Login.png)
+![](mockup/result/Login.png)
 
 Halaman pertama yang ditampilkan jika pengguna belum *login* atau sudah *logout* adalah halaman **Login**. Pengguna dapat melakukan *login* sebagai *user*. *Login* hanya membandingkan email dan password saja. Tidak perlu tambahan proteksi apapun.
 
@@ -48,7 +48,7 @@ Header aplikasi web terdiri dari *search bar* dan pilihan untuk *logout*. Search
 
 ### Search Result page
 
-![](mockup/Result/Search.png)
+![](mockup/result/Search.png)
 
 Hasil pencarian dari *search bar* di halaman Home akan ditampilkan pada halaman ini. Untuk setiap film, ditampilkan informasi judul, sinopsis, rating, poster. Pengguna dapat melihat detail film dengan mengklik tombol “View details”.
 
@@ -56,7 +56,7 @@ Jika daftar film melebihi jumlah tertentu (jumlah didefinisikan sendiri), maka a
 
 ### Film Detail page
 
-![](mockup/Result/MovieDetail.png)
+![](mockup/result/MovieDetail.png)
 
 Pada halaman **Film Detail**, terdapat beberapa informasi mengenai film yang dipilih, yaitu judul, poster, rating, genre (bisa lebih dari satu), tanggal rilis, durasi tayang (dalam menit), dan sinopsis dari film tersebut.
 
