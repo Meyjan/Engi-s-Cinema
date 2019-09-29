@@ -184,9 +184,9 @@ Untuk aplikasi ini digunakan server apache yang tersedia dari aplikasi XAMPP. la
 8. User review : 13515128
 
 ## Penjelasan Pembagian tugas:
-13517101 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
-13517131 bertanggung jawab atas bagian dalam dari aplikasi
-13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi 
+1. 13517101 bertanggung jawab atas bagian masuk dan homepage dari aplikasi
+2. 13517131 bertanggung jawab atas bagian dalam dari aplikasi
+3. 13515128 bertanggung jawab atas bagian pasca pemrosesan dalam aplikasi 
 
 
 ## About
