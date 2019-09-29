@@ -10,11 +10,13 @@ button {
     background-color: transparent;
     cursor: pointer;
     font-weight: bold;
+    font-family: inherit;
 }
 button > img {
     width: 1.2em;
     height: 1.2em;
     margin-bottom: -3%;
+    margin-left: 10%;
 }
 .search-result {
     background-color: white;
@@ -35,6 +37,7 @@ button > img {
     column-count: 2;
     column-gap: 20px;
     align-items: flex-end;
+    max-width: 97.5%;
 }
 .movie-poster {
     width: 9em;
@@ -49,14 +52,23 @@ button > img {
     height: 12em;
 }
 .detail-btn {
-    margin-left: 29%;
+    margin-left: auto;
     margin-bottom: 0;
     max-height: 2em;
     align-items: center;
+    width: 10em;
 }
 .detail-btn > a {
     text-decoration: none;
     color: #4bb8e2;
+}
+.movie-rating {
+    padding-top: 0;
+    max-width: 10em;
+    max-height: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #return-text {
     font-size: 20px;
@@ -70,14 +82,6 @@ button > img {
 }
 #movie-desc {
     font-weight: normal;
-}
-#movie-rating {
-    padding-top: 0;
-    max-width: 10em;
-    max-height: 2em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 #score-rating {
     color: #6b6b6b;

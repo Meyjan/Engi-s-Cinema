@@ -32,12 +32,14 @@ button {
     background-color: transparent;
     cursor: pointer;
     font-weight: bold;
+    font-family: inherit;
 }
 button.avail {
     color: #00aaef;
 }
 button.not-avail {
     color: red;
+    cursor: default;
 }
 button > img {
     width: 1em;
@@ -168,7 +170,7 @@ button > img {
 }
 #username {
     margin-top: 2.5%;
-    margin-bottom: 0;
+    margin-bottom: 2.5%;
 }
 .user-score {
     font-size: 1.5em;

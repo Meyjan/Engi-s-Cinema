@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 form {
   text-align: left;
   margin-left: 5%;
@@ -7,14 +12,14 @@ form {
 label {
   font-size: 12px;
   font-weight: bold;
-  font-family: "Arial", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 p {
   text-align: center;
   font-weight: bold;
   font-size: 11px;
-  font-family: "Arial", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
@@ -24,6 +29,7 @@ a {
 
 input,
 button {
+  font-family: inherit;
   border: 1px solid #888888;
   width: 100%;
   padding: 12px 20px;
@@ -139,7 +145,7 @@ button {
 
 .error {
   color: red;
-  font-family: "Arial", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-top: 5px;
   margin-bottom: 15px;
   font-size: 12px;
@@ -149,7 +155,7 @@ button {
   margin-top: 5%;
   font-size: 19px;
   font-weight: bold;
-  font-family: "Arial", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 10%;
 }
 
